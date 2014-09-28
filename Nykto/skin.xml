@@ -1,0 +1,28 @@
+<!DOCTYPE skin>
+<skin>
+	<manifest>
+		<title>Nykto</title>
+		<author>zezic</author>
+		<email>
+		<version>1.12.0.01</version>
+		<description>Very customizable dark skin</description>
+		<language>en</language>
+		<license>Creative Commons Attribution, Share-Alike 3.0 Unported</license>
+		<attributes>
+			<attribute config_key="[Master],num_decks">4</attribute>
+			<attribute config_key="[Master],num_samplers">16</attribute>
+			<attribute config_key="[Master],num_preview_decks">1</attribute>
+		</attributes>
+	</manifest>
+
+	<ObjectName>Mixxx</ObjectName>
+
+	<MinimumSize>400,-1</MinimumSize>
+	<SizePolicy>me,me</SizePolicy>
+	<Layout>vertical</Layout>
+	
+	
+	<Children>
+		
+	</Children>
+</skin>
