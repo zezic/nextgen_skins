@@ -10,7 +10,7 @@ Description: Green button.
             <Template src="skin:buttons/push.xml"/>
             <Template src="skin:labels/small_calm.xml"/>
             <Template src="skin:labels/small_active.xml"/>
-            <Template src="skin:buttons/darken.xml"/>
+            <!-- <Template src="skin:buttons/darken.xml"/> -->
             <Template src="skin:buttons/symbol_active.xml"/>
             <Template src="skin:buttons/symbol_calm.xml"/>
             <Template src="skin:buttons/images/green.xml"/>

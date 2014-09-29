@@ -6,23 +6,21 @@
 <Template>
 	<WidgetGroup>
 		<Layout>vertical</Layout>
-		<Size>i,i</Size>
-		<Style>QGroupBox {
-		    background: transparent;
-		    border-top: 0px;
-		    margin: 0px;}
-		</Style>
+		<Size>f,f</Size>
+		<Style> QGroupBox { padding-top: 1px; } </Style>
 		<Children>
 			<WidgetGroup>
 				<Layout>stacked</Layout>
-				<Size>i,i</Size>
+				<Size>f,f</Size>
 				<Children>
 					<Label>
-					    <Style> QLabel { font: 10px PT Mono; font-weight: bold; color: rgba(255,255,255,50%); text-align: center; padding-left: 1px; }</Style>
+						<Size>f,f</Size>
+					    <Style> QLabel { font: 12px PT Mono; font-weight: bold; color: rgba(255,255,255,50%); text-align: center; padding-left: 1px; }</Style>
 					    <Text><Variable name="text"/></Text>
 					</Label>
 					<Label>
-					    <Style> QLabel { font: 10px PT Mono; font-weight: bold; color: rgba(0,0,0,50%); text-align: center; padding-left: 1px; margin-bottom:3px;}</Style>
+						<Size>f,f</Size>
+					    <Style> QLabel { font: 12px PT Mono; font-weight: bold; color: rgba(0,0,0,100%); text-align: center; padding-left: 1px; margin-bottom:3px;}</Style>
 					    <Text><Variable name="text"/></Text>
 					</Label>
 				</Children>
@@ -30,7 +28,7 @@
 		</Children>
 		<Connection>
 		    <ConfigKey><Variable name="channel"/>,<Variable name="indicator"/></ConfigKey>
-		    <BindProperty>visible</BindProperty>7
+		    <BindProperty>visible</BindProperty>
 		    <Transform>
 		    	<Invert/>
 		    	<Add>1</Add>

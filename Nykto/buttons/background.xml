@@ -4,7 +4,7 @@ Description: Vu meter.
 -->
 <Template>
     <WidgetGroup>
-        <Size>60me,20me</Size>
+        <Size>me,me</Size>
         <Style>QGroupBox {
             border-top: 4px;
             border-bottom: 4px;
@@ -14,15 +14,7 @@ Description: Vu meter.
         </Style>
         <Layout>vertical</Layout>
         <Children>
-
-            <Template src="skin:spacers/8px.xml"/>
-            <Template src="skin:labels/small.xml"/>
-            <Template src="skin:buttons/symbol.xml">
-                <SetVariable name="opacity">0.5</SetVariable>
-                <SetVariable name="shadow">0.75</SetVariable>
-                <SetVariable name="symbol_color">#FFFFFF</SetVariable>
-            </Template>
-            <Template src="skin:spacers/8px.xml"/>
+            
         </Children>
     </WidgetGroup>
 </Template>
