@@ -9,24 +9,18 @@ Call me with:
 	<SetVariable name="channel">[Channel1]</SetVariable>
 </Template>
 
-I fill all given width and have 2px height.
+I use your color for bar, 25% for background, fill all given width and have 2px height.
 -->
 <Template>
 	<WidgetGroup>
-		<Layout>horizontal</Layout>
+		<Layout>vertical</Layout>
 		<Children>
-			<WidgetGroup>
-				<Layout>vertical</Layout>
-				<Children>
-					<Template src="skin:indicators/vumeter/vumeter.xml">
-						<SetVariable name="vumeter_control">VuMeterL</SetVariable>
-					</Template>
-					<Template src="skin:indicators/vumeter/vumeter.xml">
-						<SetVariable name="vumeter_control">VuMeterR</SetVariable>
-					</Template>
-				</Children>
-			</WidgetGroup>
-			<Template src="skin:decorations/top-fill.xml"/>
+			<Template src="skin:indicators/vumeter/vumeter.xml">
+				<SetVariable name="vumeter_control">VuMeterL</SetVariable>
+			</Template>
+			<Template src="skin:indicators/vumeter/vumeter.xml">
+				<SetVariable name="vumeter_control">VuMeterR</SetVariable>
+			</Template>
 		</Children>
 	</WidgetGroup>
 </Template>

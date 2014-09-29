@@ -8,7 +8,7 @@
 		<ObjectName>Sampler</ObjectName>
 		<Layout>horizontal</Layout>
 		<SizePolicy>me,f</SizePolicy>
-		<MaximumSize>350,-1</MaximumSize>
+		<MaximumSize>300,-1</MaximumSize>
 		<Children>
 			<Template src="skin:spacers/2px.xml"/>
 			<WidgetGroup>
@@ -16,15 +16,23 @@
 				<Layout>vertical</Layout>
 				<Children>
 					<Template src="skin:spacers/2px.xml"/>
-					<Template src="skin:indicators/vumeter/vumeter-stereo.xml">
-						<SetVariable name="width">250</SetVariable>
-						<SetVariable name="color">#F1AD0D</SetVariable>
-					</Template>
+					<WidgetGroup>
+						<Style> QGroupBox { background-color: #F1AD0D; } </Style>
+						<Layout>horizontal</Layout>
+						<Children>
+							<Template src="skin:indicators/vumeter/vumeter-stereo.xml">
+								<SetVariable name="color">#F1AD0D</SetVariable>
+								<SetVariable name="raga">QGroupBox { background-color: rgba(255, 0, 0, 25%);}</SetVariable>
+							</Template>
+						</Children>
+					</WidgetGroup>
 					<WidgetGroup>
 						<ObjectName>SamplerBody</ObjectName>
-						<Style>QGroupBox { background-color: #303030; }</Style>
+						<Style>QGroupBox { background-color: #303030;  }</Style>
 						<Size>me,50f</Size>
+						<!-- <Layout>vertical</Layout> -->
 						<Children>
+							<Template src="skin:buttons/play-sampler.xml"/>
 						</Children>
 					</WidgetGroup>
 					<Template src="skin:decorations/bottom-shadow.xml"/>

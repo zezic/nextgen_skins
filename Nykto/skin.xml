@@ -30,11 +30,5 @@
 		<Template src="skin:sampler/sampler.xml">
 			<SetVariable name="channel">[Sampler2]</SetVariable>
 		</Template>
-		<Template src="skin:sampler/sampler.xml">
-			<SetVariable name="channel">[Sampler3]</SetVariable>
-		</Template>
-		<Template src="skin:sampler/sampler.xml">
-			<SetVariable name="channel">[Sampler4]</SetVariable>
-		</Template>
 	</Children>
 </skin>
