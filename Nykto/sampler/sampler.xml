@@ -1,0 +1,36 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Sampler.
+-->
+<Template>
+	<WidgetGroup>
+		<ObjectName>Sampler</ObjectName>
+		<Layout>horizontal</Layout>
+		<SizePolicy>me,f</SizePolicy>
+		<MaximumSize>350,-1</MaximumSize>
+		<Children>
+			<Template src="skin:spacers/2px.xml"/>
+			<WidgetGroup>
+				<ObjectName>SamplerBig</ObjectName>
+				<Layout>vertical</Layout>
+				<Children>
+					<Template src="skin:spacers/2px.xml"/>
+					<Template src="skin:indicators/vumeter/vumeter-stereo.xml">
+						<SetVariable name="width">250</SetVariable>
+						<SetVariable name="color">#F1AD0D</SetVariable>
+					</Template>
+					<WidgetGroup>
+						<ObjectName>SamplerBody</ObjectName>
+						<Style>QGroupBox { background-color: #303030; }</Style>
+						<Size>me,50f</Size>
+						<Children>
+						</Children>
+					</WidgetGroup>
+					<Template src="skin:decorations/bottom-shadow.xml"/>
+				</Children>
+			</WidgetGroup>
+			<Template src="skin:spacers/2px.xml"/>
+		</Children>
+	</WidgetGroup>
+</Template>

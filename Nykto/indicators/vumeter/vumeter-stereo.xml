@@ -1,0 +1,32 @@
+<!DOCTYPE template>
+<!--
+Description: Vu meter.
+
+Call me with:
+<Template src="skin:indicators/vumeter/vumeter-stereo.xml">
+	<SetVariable name="width">200</SetVariable>
+	<SetVariable name="color">#F1AD0D</SetVariable>
+	<SetVariable name="channel">[Channel1]</SetVariable>
+</Template>
+
+I fill all given width and have 2px height.
+-->
+<Template>
+	<WidgetGroup>
+		<Layout>horizontal</Layout>
+		<Children>
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<Children>
+					<Template src="skin:indicators/vumeter/vumeter.xml">
+						<SetVariable name="vumeter_control">VuMeterL</SetVariable>
+					</Template>
+					<Template src="skin:indicators/vumeter/vumeter.xml">
+						<SetVariable name="vumeter_control">VuMeterR</SetVariable>
+					</Template>
+				</Children>
+			</WidgetGroup>
+			<Template src="skin:decorations/top-fill.xml"/>
+		</Children>
+	</WidgetGroup>
+</Template>

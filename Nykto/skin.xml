@@ -3,7 +3,6 @@
 	<manifest>
 		<title>Nykto</title>
 		<author>zezic</author>
-		<email>
 		<version>1.12.0.01</version>
 		<description>Very customizable dark skin</description>
 		<language>en</language>
@@ -16,13 +15,26 @@
 	</manifest>
 
 	<ObjectName>Mixxx</ObjectName>
-
-	<MinimumSize>400,-1</MinimumSize>
+	<MinimumSize>-1,-1</MinimumSize>
 	<SizePolicy>me,me</SizePolicy>
-	<Layout>vertical</Layout>
-	
-	
+	<Layout>horizontal</Layout>
+	<Style>
+		#Mixxx {
+			background-color: #181818;
+		}
+	</Style>
 	<Children>
-		
+		<Template src="skin:sampler/sampler.xml">
+			<SetVariable name="channel">[Sampler1]</SetVariable>
+		</Template>
+		<Template src="skin:sampler/sampler.xml">
+			<SetVariable name="channel">[Sampler2]</SetVariable>
+		</Template>
+		<Template src="skin:sampler/sampler.xml">
+			<SetVariable name="channel">[Sampler3]</SetVariable>
+		</Template>
+		<Template src="skin:sampler/sampler.xml">
+			<SetVariable name="channel">[Sampler4]</SetVariable>
+		</Template>
 	</Children>
 </skin>

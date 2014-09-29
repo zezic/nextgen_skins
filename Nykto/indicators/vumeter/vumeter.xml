@@ -1,0 +1,29 @@
+<!DOCTYPE template>
+<!--
+Description: Vu meter.
+-->
+<Template>
+	<WidgetGroup>
+		<ObjectName>PeakVuMeter</ObjectName>
+		<Layout>horizontal</Layout>
+		<SizePolicy>min,min</SizePolicy>
+		<MinimumSize>-1,<Variable name="wrapper_height"/></MinimumSize>
+		<MaximumSize>-1,<Variable name="wrapper_height"/></MaximumSize>
+		<Size><Variable name="width"/>,1f</Size>
+		<Children>
+			<VuMeter>
+				<TooltipId>channel_VuMeter</TooltipId>
+				<PathVu>indicators/vumeter/images/<Variable name="vumeter_control"/>.svg</PathVu>
+				<PathBack>indicators/vumeter/images/<Variable name="vumeter_control"/>-BG.svg</PathBack>
+				<Horizontal>true</Horizontal>
+				<PeakHoldSize>2</PeakHoldSize>
+				<PeakHoldTime>0</PeakHoldTime>
+				<PeakFallTime>50</PeakFallTime>
+				<PeakFallStep>10</PeakFallStep>
+				<Connection>
+					<ConfigKey><Variable name="channel"/>,<Variable name="vumeter_control"/></ConfigKey>
+				</Connection>
+			</VuMeter>
+		</Children>
+	</WidgetGroup>
+</Template>
