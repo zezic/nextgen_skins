@@ -7,7 +7,7 @@
 	<WidgetGroup>
 		<ObjectName>Sampler</ObjectName>
 		<Layout>horizontal</Layout>
-		<SizePolicy>me,f</SizePolicy>
+		<SizePolicy>me,me</SizePolicy>
 		<MaximumSize>300,-1</MaximumSize>
 		<Children>
 			<Template src="skin:spacers/2px.xml"/>
@@ -28,17 +28,42 @@
 					</WidgetGroup>
 					<WidgetGroup>
 						<ObjectName>SamplerBody</ObjectName>
-						<Style>QGroupBox { background-color: #303030;  }</Style>
-						<Size>me,50f</Size>
-						<!-- <Layout>vertical</Layout> -->
+						<Style>QGroupBox { background-color: #303030; }</Style>
+						<Size>me,me</Size>
+						<Layout>vertical</Layout>
 						<Children>
-							<Template src="skin:buttons/play-sampler.xml"/>
+							<Template src="skin:spacers/4px.xml"/>
+							<WidgetGroup>
+								<Layout>horizontal</Layout>
+								<Children>
+									<Template src="skin:spacers/4px.xml"/>
+									<Template src="skin:buttons/green.xml">
+										<SetVariable name="states">1</SetVariable>
+										<SetVariable name="hide_text">1</SetVariable>
+										<SetVariable name="image">play-sampler</SetVariable>
+										<SetVariable name="leftclick">start_play</SetVariable>
+										<SetVariable name="rightclick">start_stop</SetVariable>
+										<SetVariable name="indicator">play_indicator</SetVariable>
+									</Template>
+
+									<Template src="skin:buttons/red_no_dark.xml">
+										<SetVariable name="states">2</SetVariable>
+										<SetVariable name="text">PFL</SetVariable>
+										<SetVariable name="image"></SetVariable>
+										<SetVariable name="hide_icon">1</SetVariable>
+										<SetVariable name="leftclick">pfl</SetVariable>
+										<SetVariable name="rightclick">pfl</SetVariable>
+										<SetVariable name="indicator">pfl</SetVariable>
+									</Template>
+									<Template src="skin:spacers/4px.xml"/>
+								</Children>
+							</WidgetGroup>
+							<Template src="skin:spacers/2px.xml"/>
 						</Children>
 					</WidgetGroup>
 					<Template src="skin:decorations/bottom-shadow.xml"/>
 				</Children>
 			</WidgetGroup>
-			<Template src="skin:spacers/2px.xml"/>
 		</Children>
 	</WidgetGroup>
 </Template>

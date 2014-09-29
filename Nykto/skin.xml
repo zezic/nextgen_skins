@@ -13,7 +13,6 @@
 			<attribute config_key="[Master],num_preview_decks">1</attribute>
 		</attributes>
 	</manifest>
-
 	<ObjectName>Mixxx</ObjectName>
 	<MinimumSize>-1,-1</MinimumSize>
 	<SizePolicy>me,me</SizePolicy>

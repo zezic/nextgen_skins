@@ -1,0 +1,22 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Sampler.
+-->
+<Template>
+	<WidgetGroup>
+		<Layout>stacked</Layout>
+		<Size>f,<Variable name="hide_text"/>f</Size>
+		<Style> QGroupBox { border-image: none; margin: 0px; padding: 0px; background: transparent;} </Style>
+		<Children>
+			<Label>
+			    <Style> QLabel { font: 10px PT Mono; font-weight: bold; color: rgba(255,255,255,50%); text-align: center; padding-left: 1px; }</Style>
+			    <Text><Variable name="text"/></Text>
+			</Label>
+			<Label>
+			    <Style> QLabel { font: 10px PT Mono; font-weight: bold; color: rgba(0,0,0,50%); text-align: center; padding-left: 1px; margin-bottom:3px;}</Style>
+			    <Text><Variable name="text"/></Text>
+			</Label>
+		</Children>
+	</WidgetGroup>
+</Template>

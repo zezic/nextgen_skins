@@ -1,0 +1,49 @@
+<!DOCTYPE template>
+<!--
+Description: Vu meter.
+-->
+<Template>
+    <WidgetGroup>
+        <Size>f,f</Size>
+        <Style>QGroupBox {
+            margin: 2px;
+            background: transparent;
+            }
+        </Style>
+        <Layout>horizontal</Layout>
+        <Children>
+            <WidgetGroup>
+                <Size>f,f</Size>
+                <Style>QGroupBox {
+                    margin: 2px;
+                    background: transparent;
+                    }
+                </Style>
+                <Layout>stacked</Layout>
+                <Children>
+                    <Template src="skin:labels/small.xml"/>
+                    <WidgetGroup>
+                        <Size>me,<Variable name="hide_icon"/>f</Size>
+                        <Style>QGroupBox {
+                            margin: 2px;
+                            background: transparent;
+                            }
+                        </Style>
+                        <Layout>horizontal</Layout>
+                        <Children>
+                            <Template src="skin:buttons/symbol.xml">
+                                <SetVariable name="opacity">0.75</SetVariable>
+                                <SetVariable name="shadow">0.0</SetVariable>
+                                <SetVariable name="symbol_color">#000000</SetVariable>
+                            </Template>
+                        </Children>
+                    </WidgetGroup>
+                </Children>
+                <Connection>
+                    <ConfigKey><Variable name="channel"/>,<Variable name="indicator"/></ConfigKey>
+                    <BindProperty>visible</BindProperty>
+                </Connection>
+            </WidgetGroup>
+        </Children>
+    </WidgetGroup>
+</Template>
