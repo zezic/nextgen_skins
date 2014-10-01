@@ -29,7 +29,7 @@
 						<Style> QGroupBox { background-color: #303030; } </Style>
 						<Children>
 
-							<!-- Play, Gain, PFL -->
+							<!-- Play, Gain+Overload, PFL -->
 
 							<WidgetGroup>
 								<Layout>vertical</Layout>
@@ -37,7 +37,7 @@
 								<Style> QGroupBox { background: transparent; } </Style>
 								<Children>
 									<Template src="skin:buttons/green.xml">
-										<SetVariable name="size">42,22</SetVariable>
+										<SetVariable name="size">42f,22f</SetVariable>
 										<SetVariable name="states">1</SetVariable>
 										<SetVariable name="text"></SetVariable>
 										<SetVariable name="image">play-sampler</SetVariable>
@@ -45,7 +45,7 @@
 										<SetVariable name="rightclick">start_stop</SetVariable>
 										<SetVariable name="indicator">play_indicator</SetVariable>
 									</Template>
-									<Template src="skin:knobs/knob.xml">
+									<Template src="skin:knobs/knob-overload.xml">
 										<SetVariable name="color">red</SetVariable>
 										<SetVariable name="control">pregain</SetVariable>
 										<SetVariable name="text">GAIN</SetVariable>
@@ -54,7 +54,7 @@
 										<Layout>horizontal</Layout>
 										<Children>
 											<Template src="skin:buttons/green-nodark.xml">
-												<SetVariable name="size">42,22</SetVariable>
+												<SetVariable name="size">42f,22f</SetVariable>
 												<SetVariable name="states">2</SetVariable>
 												<SetVariable name="text">PFL</SetVariable>
 												<SetVariable name="image"></SetVariable>
@@ -66,6 +66,9 @@
 									</WidgetGroup>
 								</Children>
 							</WidgetGroup>
+
+							<!-- Waveform, Title+Eject, BPM+Sync, Repeat, Keylock -->
+
 							<WidgetGroup>
 								<Layout>vertical</Layout>
 								<Size>me,f</Size>
