@@ -41,7 +41,8 @@
 										<Style> QGroupBox { background: transparent; } </Style>
 										<Children>
 											<Template src="skin:buttons/green.xml">
-												<SetVariable name="size">42f,22f</SetVariable>
+												<SetVariable name="size">42f,22me</SetVariable>
+												<SetVariable name="maximumsize">42,42</SetVariable>
 												<SetVariable name="states">1</SetVariable>
 												<SetVariable name="text"></SetVariable>
 												<SetVariable name="image">play-sampler</SetVariable>

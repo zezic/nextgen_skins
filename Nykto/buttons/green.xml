@@ -6,6 +6,7 @@ Description: Green button.
     <WidgetGroup>
         <Layout>stacked</Layout>
         <Size><Variable name="size"/></Size>
+        <MaximumSize><Variable name="maximumsize"/></MaximumSize>
         <Children>
             <Template src="skin:buttons/push.xml"/>
             <Template src="skin:labels/small_calm.xml"/>
