@@ -9,7 +9,7 @@
 		<Group><Variable name="channel"/></Group>
 		<Pos>40,25</Pos>
 		<Size>me,me</Size>
-		<MinimumSize>-1,40</MinimumSize>
+		<MinimumSize>-1,-1</MinimumSize>
 		<BgColor></BgColor>
 		<SignalHighColor></SignalHighColor>
 		<SignalMidColor></SignalMidColor>

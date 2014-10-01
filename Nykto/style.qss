@@ -6,6 +6,7 @@
   font: 11pt Felipe;
   color: rgba(255,255,255,75%);
   text-transform: none;
+  padding-left: 1px;
 }
 #SamplerBPM QLabel {
   font: bold 11pt Felipe;

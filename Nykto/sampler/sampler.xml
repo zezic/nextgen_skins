@@ -70,6 +70,10 @@
 													</Template>
 												</Children>
 											</WidgetGroup>
+											<WidgetGroup>
+												<Size>1f,me</Size>
+												<MaximumSize>1f,5</MaximumSize>
+											</WidgetGroup>
 											<Template src="skin:spacers/dynamic.xml"/>
 										</Children>
 									</WidgetGroup>
