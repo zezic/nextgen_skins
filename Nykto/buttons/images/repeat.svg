@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   width="12"
+   height="15">
+  <script src="svg.js">
+    // <![CDATA[
+      symbol_color = String( symbol_color );
+      opacity = Number( opacity );
+    // ]]>
+  </script>
+  <g
+     id="layer1">
+    <path
+       d="m 5,0 0,3.0937 c -2.8414,0.473 -5,2.9307 -5,5.9063 0,3.3137 2.6863,6 6,6 3.3137,0 6,-2.6863 6,-6 0,-1.0929 -0.302,-2.1175 -0.8125,-3 l -1.75,1 c 0.3415,0.5891 0.5625,1.2701 0.5625,2 0,2.2091 -1.7909,4 -4,4 -2.2091,0 -4,-1.7909 -4,-4 0,-1.8632 1.2757,-3.3991 3,-3.8438 l 0,3.8438 5,-4.5 -5,-4.5 z"
+       id="Symbol"
+       style="fill:#ffffff;fill-opacity:0.5;prop( 'fill-opacity', 'opacity' );prop( 'fill', 'symbol_color' );" />
+  </g>
+</svg>

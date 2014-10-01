@@ -1,14 +1,12 @@
 <!DOCTYPE template>
 <!--
-Description: Green overlay.
+Description: Grey overlay.
 -->
 <Template>
     <WidgetGroup>
-        <Size>me,me</Size>
+        <Size>f,f</Size>
         <Style>QGroupBox {
-            background-color: #CBFF81;
-            border-top: 2px solid rgba(0,0,0,20%);
-            margin: 2px;}
+            background-color: rgba(255,255,255,20%); }
         </Style>
         <Connection>
             <ConfigKey><Variable name="channel"/>,<Variable name="indicator"/></ConfigKey>
@@ -16,11 +14,9 @@ Description: Green overlay.
         </Connection>
     </WidgetGroup>
     <WidgetGroup>
-        <Size>me,me</Size>
+        <Size>f,f</Size>
         <Style>QGroupBox {
-            background-color: transparent;
-            border-top: 0px solid rgba(0,0,0,20%);
-            margin: 2px;}
+            background-color: transparent; }
         </Style>
         <Connection>
             <ConfigKey><Variable name="channel"/>,<Variable name="indicator"/></ConfigKey>

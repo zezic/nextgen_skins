@@ -1,0 +1,23 @@
+<WidgetGroup>
+	<Layout>horizontal</Layout>
+	<Size>me,f</Size>
+	<Children>
+
+	</Children>
+</WidgetGroup>
+
+<WidgetGroup>
+	<Layout>vertical</Layout>
+	<Size>me,f</Size>
+	<Children>
+		
+	</Children>
+</WidgetGroup>
+
+<WidgetGroup>
+	<Layout>stacked</Layout>
+	<Size>me,f</Size>
+	<Children>
+		
+	</Children>
+</WidgetGroup>

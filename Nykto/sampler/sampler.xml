@@ -71,14 +71,150 @@
 
 							<WidgetGroup>
 								<Layout>vertical</Layout>
-								<Size>me,f</Size>
+								<Size>me,me</Size>
 								<Style> QGroupBox { background: transparent; } </Style>
 								<Children>
 									<WidgetGroup>
 										<Layout>vertical</Layout>
-										<Size>me,f</Size>
+										<Size>me,me</Size>
+										<Style>QGroupBox {
+										    border-top: 4px;
+										    border-bottom: 4px;
+										    border-left: 4px;
+										    border-right: 4px;
+										    border-image: url(skin:backgrounds/recess.svg); }
+										</Style>
 										<Children>
-											
+											<WidgetGroup> <!-- It's style delimiter  -->
+												<Layout>vertical</Layout>
+												<Size>me,me</Size>
+												<Style>QGroupBox {
+												    border-top: 0px;
+												    border-bottom: 0px;
+												    border-left: 0px;
+												    border-right: 0px;
+												    border-image: none; }
+												</Style>
+												<Children>
+
+													<!-- Title+Eject, BPM+Sync -->
+
+													<WidgetGroup>
+														<Layout>vertical</Layout>
+														<Size>me,f</Size>
+														<Children>
+															<WidgetGroup>
+																<Layout>horizontal</Layout>
+																<Size>me,21f</Size>
+																<Children>
+																	<WidgetGroup>
+																		<ObjectName>SamplerTitle</ObjectName>
+																		<Layout>stacked</Layout>
+																		<Size>i,f</Size>
+																		<Children>
+																			<Template src="skin:buttons/push.xml">
+																				<SetVariable name="states">1</SetVariable>
+																				<SetVariable name="leftclick">eject</SetVariable>
+																				<SetVariable name="rightclick">eject</SetVariable>
+																			</Template>
+														                    <TrackProperty>
+														                      <TooltipId>track_title</TooltipId>
+														                      <SizePolicy>me,min</SizePolicy>
+														                      <Property>title</Property>
+														                      <Group><Variable name="channel"/></Group>
+														                    </TrackProperty>
+																		</Children>
+																	</WidgetGroup>
+																	<Template src="skin:spacers/separator-vertical.xml"/>
+																	<WidgetGroup>
+																		<ObjectName>SamplerBPM</ObjectName>
+																		<Layout>stacked</Layout>
+																		<Size>57f,me</Size>
+																		<Children>
+																			<Template src="skin:buttons/push.xml">
+																				<SetVariable name="states">1</SetVariable>
+																				<SetVariable name="leftclick">beatsync</SetVariable>
+																				<SetVariable name="rightclick">beatsync_tempo</SetVariable>
+																			</Template>
+																			<NumberBpm>
+																				<TooltipId>visual_bpm</TooltipId>
+																				<Group><Variable name="channel"/></Group>
+																				<Alignment>center</Alignment>
+																				<Connection>
+																					<ConfigKey><Variable name="channel"/>,visual_bpm</ConfigKey>
+																				</Connection>
+																			</NumberBpm>
+																			<Template src="skin:buttons/images/grey.xml">
+																				<SetVariable name="states">1</SetVariable>
+																				<SetVariable name="indicator">beatsync</SetVariable>
+																			</Template>
+																			<Template src="skin:buttons/images/grey.xml">
+																				<SetVariable name="states">1</SetVariable>
+																				<SetVariable name="indicator">beatsync_tempo</SetVariable>
+																			</Template>
+																		</Children>
+																	</WidgetGroup>
+
+																</Children>
+															</WidgetGroup>
+															<Template src="skin:spacers/separator-horizontal.xml"/>
+														</Children>
+													</WidgetGroup>
+													<WidgetGroup>
+														<Layout>horizontal</Layout>
+														<Size>me,me</Size>
+														<Children>
+															<Overview>
+																<TooltipId>waveform_overview</TooltipId>
+																<Style></Style>
+																<Group><Variable name="channel"/></Group>
+																<Pos>40,25</Pos>
+																<Size>me,me</Size>
+																<BgColor></BgColor>
+																<SignalHighColor></SignalHighColor>
+																<SignalMidColor></SignalMidColor>
+																<SignalLowColor></SignalLowColor>
+																<SignalColor>#777777</SignalColor>
+																<PlayPosColor>#DDDDDD</PlayPosColor>
+																<DefaultMark>
+																	<Align>bottom</Align>
+																	<Color>#00FF00</Color>
+																	<TextColor>#FFFFFF</TextColor>
+																	<Text> %1 </Text>
+																</DefaultMark>
+																<Connection>
+																	<ConfigKey><Variable name="channel"/>,playposition</ConfigKey>
+																	<EmitOnDownPress>false</EmitOnDownPress>
+																</Connection>
+															</Overview>
+															<Template src="skin:spacers/separator-vertical.xml"/>
+															<WidgetGroup>
+																<Layout>vertical</Layout>
+																<Size>28f,me</Size>
+																<Children>
+																	<Template src="skin:buttons/lcd.xml">
+																		<SetVariable name="size">me,me</SetVariable>
+																		<SetVariable name="states">2</SetVariable>
+																		<SetVariable name="image">repeat</SetVariable>
+																		<SetVariable name="leftclick">repeat</SetVariable>
+																		<SetVariable name="rightclick"></SetVariable>
+																		<SetVariable name="indicator">repeat</SetVariable>
+																	</Template>
+																	<Template src="skin:spacers/separator-horizontal.xml"/>
+																	<Template src="skin:buttons/lcd.xml">
+																		<SetVariable name="size">me,me</SetVariable>
+																		<SetVariable name="states">2</SetVariable>
+																		<SetVariable name="image">keylock</SetVariable>
+																		<SetVariable name="leftclick">keylock</SetVariable>
+																		<SetVariable name="rightclick"></SetVariable>
+																		<SetVariable name="indicator">keylock</SetVariable>
+																	</Template>
+																</Children>
+															</WidgetGroup>
+														</Children>
+													</WidgetGroup>
+												</Children>
+											</WidgetGroup>
 										</Children>
 									</WidgetGroup>
 									<WidgetGroup>
@@ -89,11 +225,17 @@
 									</WidgetGroup>
 								</Children>
 							</WidgetGroup>
+
+							<!-- Tempo slider -->
+
 							<WidgetGroup>
 								<Layout>vertical</Layout>
 								<Size>f,me</Size>
-								<Style> QGroupBox { background: transparent; } </Style>
 								<Children>
+									<Template src="skin:sliders/small.xml">
+										<SetVariable name="size">22f,me</SetVariable>
+										<SetVariable name="parameter">rate</SetVariable>
+									</Template>
 								</Children>
 							</WidgetGroup>
 						</Children>

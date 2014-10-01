@@ -1,0 +1,23 @@
+<!DOCTYPE template>
+<!--
+Description: Small slider.
+-->
+<Template>
+    <WidgetGroup>
+        <Layout>stacked</Layout>
+        <Size><Variable name="size"/></Size>
+        <Children>
+            <SliderComposed>
+                <TooltipId>tooltip</TooltipId>
+                <Handle>sliders/images/handle.svg</Handle>
+                <Size>me,me</Size>
+                <Horizontal>false</Horizontal>
+                <Connection>
+                    <ConfigKey><Variable name="channel"/>,<Variable name="parameter"/></ConfigKey>
+                    <EmitOnDownPress>false</EmitOnDownPress>
+                </Connection>
+            </SliderComposed>
+            <Template src="skin:sliders/background.xml"/>
+        </Children>
+    </WidgetGroup>
+</Template>

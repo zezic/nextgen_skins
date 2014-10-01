@@ -1,0 +1,14 @@
+#Mixxx {
+      background-color: #181818;
+}
+
+#SamplerTitle WLabel {
+  font: 11pt Felipe;
+  color: rgba(255,255,255,75%);
+  text-transform: none;
+}
+#SamplerBPM QLabel {
+  font: bold 11pt Felipe;
+  color: rgba(255,255,255,75%);
+  text-transform: none;
+}

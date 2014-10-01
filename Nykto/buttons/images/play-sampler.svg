@@ -5,13 +5,13 @@
    xmlns="http://www.w3.org/2000/svg"
    width="13"
    height="10">
-   <script src="svg.js">
-     // <![CDATA[
-       symbol_color = String( symbol_color );
-       opacity = Number( opacity );
-       shadow = Number( shadow );
-     // ]]>
-   </script>
+  <script src="svg.js">
+   // <![CDATA[
+     symbol_color = String( symbol_color );
+     opacity = Number( opacity );
+     shadow = Number( shadow );
+   // ]]>
+  </script>
   <g
      transform="translate(0,-1042.3622)"
      id="layer1">

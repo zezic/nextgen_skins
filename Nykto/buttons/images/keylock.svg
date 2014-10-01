@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   width="10"
+   height="14">
+   <script src="svg.js">
+     // <![CDATA[
+       symbol_color = String( symbol_color );
+       opacity = Number( opacity );
+     // ]]>
+   </script>
+  <path
+     style="fill:#ffffff;fill-opacity:1;prop( 'fill-opacity', 'opacity' );prop( 'fill', 'symbol_color' );"
+     d="m 5,0 0,9.0937 c -0.5306,-0.2531 -1.2323,-0.2994 -2,-0.094 -1.6568,0.444 -3,1.9006 -3,3.2813 0,1.3807 1.3432,2.1627 3,1.7187 1.5353,-0.4113 2.7912,-1.7128 2.9687,-3 l 0.031,0 0,-0.3125 0,-6.25 c 1.3333,1.1112 3.9432,1.4202 4,5.5625 l 0,-2.25 c -0.057,-5.8326 -3.5151,-4.1517 -4,-7.75 l -1,0 z"/>
+</svg>

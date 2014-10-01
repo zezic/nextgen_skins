@@ -1,10 +1,10 @@
 <!DOCTYPE template>
 <!--
-Description: Vu meter.
+Description: Transparent expanding button.
 -->
 <Template>
     <PushButton>
-        <TooltipId>play_start</TooltipId>
+        <TooltipId><Variable name="tooltip"/></TooltipId>
         <NumberStates><Variable name="states"/></NumberStates>
         <RightClickIsPushButton>true</RightClickIsPushButton>
         <Size>me,me</Size>

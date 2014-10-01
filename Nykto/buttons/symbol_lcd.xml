@@ -1,15 +1,14 @@
 <!DOCTYPE template>
 <!--
-Description: Inactive symbol for button.
+Description: Switching symbol for LCD buttons
 -->
 <Template>
     <WidgetGroup>
         <Size>f,f</Size>
         <Layout>vertical</Layout>
         <Children>
-            <Template src="skin:buttons/symbol.xml">
+            <Template src="skin:buttons/images/symbol-lcd.xml">
                 <SetVariable name="opacity">0.5</SetVariable>
-                <SetVariable name="shadow">0.75</SetVariable>
                 <SetVariable name="symbol_color">#FFFFFF</SetVariable>
             </Template>
         </Children>
@@ -26,10 +25,9 @@ Description: Inactive symbol for button.
         <Size>f,f</Size>
         <Layout>vertical</Layout>
         <Children>
-            <Template src="skin:buttons/symbol.xml">
-                <SetVariable name="opacity">0.75</SetVariable>
-                <SetVariable name="shadow">0.0</SetVariable>
-                <SetVariable name="symbol_color">#000000</SetVariable>
+            <Template src="skin:buttons/images/symbol-lcd.xml">
+                <SetVariable name="opacity">1.0</SetVariable>
+                <SetVariable name="symbol_color">#FFFFFF</SetVariable>
             </Template>
         </Children>
         <Connection>

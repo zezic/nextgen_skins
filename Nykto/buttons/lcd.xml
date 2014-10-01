@@ -1,0 +1,15 @@
+<!DOCTYPE template>
+<!--
+Description: LCD button.
+-->
+<Template>
+    <WidgetGroup>
+        <Layout>stacked</Layout>
+        <Size><Variable name="size"/></Size>
+        <Children>
+            <Template src="skin:buttons/push.xml"/>
+            <Template src="skin:buttons/symbol_lcd.xml"/>
+            <Template src="skin:buttons/images/ultra.xml"/>
+        </Children>
+    </WidgetGroup>
+</Template>
