@@ -1,0 +1,118 @@
+<!DOCTYPE template>
+<!--
+Description: Hackish 3 position switch.
+-->
+<Template>
+    <WidgetGroup>
+        <Layout>vertical</Layout>
+        <Size>f,f</Size>
+        <Children>
+            <WidgetGroup>
+                <Layout>stacked</Layout>
+                <Size><Variable name="size"/></Size>
+                <Children>
+                    <Template src="skin:buttons/push.xml">
+                        <SetVariable name="size">me,me</SetVariable>
+                        <SetVariable name="states">3</SetVariable>
+                    </Template>
+                    <WidgetGroup>
+                        <Size>me,me</Size>
+                        <Layout>stacked</Layout>
+                        <Children>
+                            <WidgetGroup>
+                                <Size>me,me</Size>
+                                <Layout>vertical</Layout>
+                                <Children>
+                                    <WidgetGroup>
+                                        <Size>me,me</Size>
+                                        <Layout>vertical</Layout>
+                                        <Children>
+                                            <WidgetGroup>
+                                                <Layout>horizontal</Layout>
+                                                <Size>me,me</Size>
+                                                <Children>
+                                                    <Template src="skin:switches/handle-small.xml"/>
+                                                    <Template src="skin:spacers/expander-horizontal.xml"/>
+                                                </Children>
+                                                <Connection>
+                                                    <ConfigKey><Variable name="channel"/>,<Variable name="indicator"/></ConfigKey>
+                                                    <BindProperty>visible</BindProperty>
+                                                    <Transform>
+                                                        <Invert/>
+                                                        <Add>2</Add>
+                                                    </Transform>
+                                                </Connection>
+                                            </WidgetGroup>
+                                        </Children>
+                                        <Connection>
+                                            <ConfigKey><Variable name="channel"/>,<Variable name="indicator"/></ConfigKey>
+                                            <BindProperty>visible</BindProperty>
+                                            <Transform>
+                                                <Add>-1</Add>
+                                            </Transform>
+                                        </Connection>
+                                    </WidgetGroup>
+                                </Children>
+                                <Connection>
+                                    <ConfigKey><Variable name="channel"/>,<Variable name="indicator"/></ConfigKey>
+                                    <BindProperty>visible</BindProperty>
+                                    <Transform>
+                                        <Add>-1</Add>
+                                    </Transform>
+                                </Connection>
+                            </WidgetGroup>
+                            <WidgetGroup>
+                                <Size>me,me</Size>
+                                <Layout>vertical</Layout>
+
+                                <Children>
+                                    <WidgetGroup>
+                                        <Size>me,me</Size>
+
+                                        <Layout>horizontal</Layout>
+                                        <Children>
+                                            <Template src="skin:spacers/expander-horizontal.xml"/>
+                                            <Template src="skin:switches/handle-small.xml"/>
+                                            <Template src="skin:spacers/expander-horizontal.xml"/>
+                                        </Children>
+                                        <Connection>
+                                            <ConfigKey><Variable name="channel"/>,<Variable name="indicator"/></ConfigKey>
+                                            <BindProperty>visible</BindProperty>
+                                            <Transform>
+                                                <Invert/>
+                                                <Add>2</Add>
+                                            </Transform>
+                                        </Connection>
+                                    </WidgetGroup>
+                                    <WidgetGroup>
+                                        <Size>me,me</Size>
+                                        <Layout>horizontal</Layout>
+                                        <Children>
+                                            <Template src="skin:spacers/expander-horizontal.xml"/>
+                                            <Template src="skin:switches/handle-small.xml"/>
+                                        </Children>
+                                        <Connection>
+                                            <ConfigKey><Variable name="channel"/>,<Variable name="indicator"/></ConfigKey>
+                                            <BindProperty>visible</BindProperty>
+                                            <Transform>
+                                                <Add>-1</Add>
+                                            </Transform>
+                                        </Connection>
+                                    </WidgetGroup>
+                                </Children>
+                                <Connection>
+                                    <ConfigKey><Variable name="channel"/>,<Variable name="indicator"/></ConfigKey>
+                                    <BindProperty>visible</BindProperty>
+                                </Connection>
+                            </WidgetGroup>
+                        </Children>
+                    </WidgetGroup>
+                    <Template src="skin:switches/background.xml"/>
+                </Children>
+            </WidgetGroup>
+            <Template src="skin:labels/switch.xml">
+                <SetVariable name="text">L-M-R</SetVariable>
+            </Template>
+        </Children>
+    </WidgetGroup>
+</Template>

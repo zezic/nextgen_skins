@@ -1,0 +1,13 @@
+<!DOCTYPE template>
+<!--
+Description: Small switch handle.
+-->
+<Template>
+    <WidgetGroup>
+        <Size>19f,me</Size>
+        <Style>QGroupBox {
+            background-image: url(skin:sliders/images/handle-horizontal.svg);
+            margin-top: 2px; margin-bottom: 2px; }
+        </Style>
+    </WidgetGroup>
+</Template>

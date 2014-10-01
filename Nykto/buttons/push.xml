@@ -14,6 +14,12 @@ Description: Transparent expanding button.
         <State>
             <Number>1</Number>
         </State>
+        <State>
+            <Number>2</Number>
+        </State>
+        <State>
+            <Number>3</Number>
+        </State>
         <Connection>
             <ConfigKey><Variable name="channel"/>,<Variable name="leftclick"/></ConfigKey>
             <ButtonState>LeftButton</ButtonState>

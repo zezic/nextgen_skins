@@ -1,0 +1,16 @@
+<!DOCTYPE template>
+<!--
+Description: Light background (for switches mainly).
+-->
+<Template>
+    <WidgetGroup>
+        <Size>me,me</Size>
+        <Style>QGroupBox {
+            border-top: 4px;
+            border-bottom: 4px;
+            border-left: 4px;
+            border-right: 4px;
+            border-image: url(skin:backgrounds/recess_light.svg); }
+        </Style>
+    </WidgetGroup>
+</Template>

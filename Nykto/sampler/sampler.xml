@@ -6,13 +6,13 @@
 <Template>
 	<WidgetStack>
 		<ObjectName>Sampler</ObjectName>
-		<SizePolicy>me,f</SizePolicy>
-		<MaximumSize>300,-1</MaximumSize>
+		<SizePolicy>me,me</SizePolicy>
+		<MaximumSize>-1,-1</MaximumSize>
 		<Children>
 			<WidgetGroup>
 				<ObjectName>SamplerFull</ObjectName>
 				<Layout>vertical</Layout>
-				<Size>me,f</Size>
+				<Size>me,me</Size>
 				<Children>
 					<WidgetGroup>
 						<Style> QGroupBox { background-color: #F1AD0D; } </Style>
@@ -25,7 +25,7 @@
 					</WidgetGroup>
 					<WidgetGroup>
 						<Layout>horizontal</Layout>
-						<Size>me,f</Size>
+						<Size>me,me</Size>
 						<Style> QGroupBox { background-color: #303030; } </Style>
 						<Children>
 
@@ -33,7 +33,7 @@
 
 							<WidgetGroup>
 								<Layout>vertical</Layout>
-								<Size>f,f</Size>
+								<Size>f,me</Size>
 								<Style> QGroupBox { background: transparent; } </Style>
 								<Children>
 									<Template src="skin:buttons/green.xml">
@@ -45,11 +45,13 @@
 										<SetVariable name="rightclick">start_stop</SetVariable>
 										<SetVariable name="indicator">play_indicator</SetVariable>
 									</Template>
+									<Template src="skin:spacers/expander-vertical.xml"/>
 									<Template src="skin:knobs/knob-overload.xml">
 										<SetVariable name="color">red</SetVariable>
 										<SetVariable name="control">pregain</SetVariable>
 										<SetVariable name="text">GAIN</SetVariable>
 									</Template>
+									<Template src="skin:spacers/expander-vertical.xml"/>
 									<WidgetGroup>
 										<Layout>horizontal</Layout>
 										<Children>
@@ -67,7 +69,7 @@
 								</Children>
 							</WidgetGroup>
 
-							<!-- Waveform, Title+Eject, BPM+Sync, Repeat, Keylock -->
+							<!-- Waveform, Title+Eject, BPM+Sync, Repeat, Keylock, Orientation, Hotcues -->
 
 							<WidgetGroup>
 								<Layout>vertical</Layout>
@@ -117,6 +119,20 @@
 																				<SetVariable name="leftclick">eject</SetVariable>
 																				<SetVariable name="rightclick">eject</SetVariable>
 																			</Template>
+																			<WidgetGroup>
+																				<Layout>horizontal</Layout>
+																				<Size>me,me</Size>
+																				<Children>
+																					<WidgetGroup>
+																						<Size>me,me</Size>
+																					</WidgetGroup>
+																					<WidgetGroup>
+																						<Layout>horizontal</Layout>
+																						<Size>20f,me</Size>
+																						<Style> QGroupBox { background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,0,0,0), stop:1 rgb(24, 24, 24, 255)); } </Style>
+																					</WidgetGroup>
+																				</Children>
+																			</WidgetGroup>
 														                    <TrackProperty>
 														                      <TooltipId>track_title</TooltipId>
 														                      <SizePolicy>me,min</SizePolicy>
@@ -166,7 +182,6 @@
 														<Children>
 															<Overview>
 																<TooltipId>waveform_overview</TooltipId>
-																<Style></Style>
 																<Group><Variable name="channel"/></Group>
 																<Pos>40,25</Pos>
 																<Size>me,me</Size>
@@ -176,6 +191,7 @@
 																<SignalLowColor></SignalLowColor>
 																<SignalColor>#777777</SignalColor>
 																<PlayPosColor>#DDDDDD</PlayPosColor>
+																<Align>top</Align>
 																<DefaultMark>
 																	<Align>bottom</Align>
 																	<Color>#00FF00</Color>
@@ -217,10 +233,26 @@
 											</WidgetGroup>
 										</Children>
 									</WidgetGroup>
+
+									<!-- Orientation, Hotcues -->
+
 									<WidgetGroup>
 										<Layout>horizontal</Layout>
 										<Size>f,f</Size>
 										<Children>
+											<WidgetGroup>
+												<Layout>vertical</Layout>
+												<Size>45f,f</Size>
+												<Children>
+													<Template src="skin:switches/switch3.xml">
+														<SetVariable name="size">45f,20f</SetVariable>
+														<SetVariable name="text">L - M - R</SetVariable>
+														<SetVariable name="leftclick">orientation</SetVariable>
+														<SetVariable name="rightclick">orientation</SetVariable>
+														<SetVariable name="indicator">orientation</SetVariable>
+													</Template>
+												</Children>
+											</WidgetGroup>
 										</Children>
 									</WidgetGroup>
 								</Children>
@@ -231,7 +263,7 @@
 							<WidgetGroup>
 								<Layout>vertical</Layout>
 								<Size>f,me</Size>
-								<Children>
+  								<Children>
 									<Template src="skin:sliders/small.xml">
 										<SetVariable name="size">22f,me</SetVariable>
 										<SetVariable name="parameter">rate</SetVariable>
