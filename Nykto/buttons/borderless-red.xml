@@ -1,0 +1,19 @@
+<!DOCTYPE template>
+<!--
+Description: Red borderless button.
+-->
+<Template>
+    <WidgetGroup>
+        <Layout>stacked</Layout>
+        <Size><Variable name="size"/></Size>
+        <Children>
+            <Template src="skin:buttons/push.xml"/>
+            <Template src="skin:labels/medium_calm.xml"/>
+            <Template src="skin:labels/medium_active.xml"/>
+            <Template src="skin:buttons/darken-borderless.xml"/>
+            <Template src="skin:buttons/symbol_calm.xml"/>
+            <Template src="skin:buttons/images/red.xml"/>
+            <Template src="skin:buttons/background-borderless.xml"/>
+        </Children>
+    </WidgetGroup>
+</Template>

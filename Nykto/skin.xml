@@ -19,11 +19,22 @@
 	<SizePolicy>me,me</SizePolicy>
 	<Layout>horizontal</Layout>
 	<Children>
+		<SetVariable name="global_spacing">8f,8f</SetVariable>
+		<SetVariable name="block_spacing">4f,4f</SetVariable>
 		<Template src="skin:sampler/sampler.xml">
 			<SetVariable name="channel">[Sampler1]</SetVariable>
 		</Template>
+		<Template src="skin:spacers/blocks.xml"/>
 		<Template src="skin:sampler/sampler.xml">
 			<SetVariable name="channel">[Sampler2]</SetVariable>
+		</Template>
+		<Template src="skin:spacers/blocks.xml"/>
+		<Template src="skin:sampler/sampler.xml">
+			<SetVariable name="channel">[Sampler3]</SetVariable>
+		</Template>
+		<Template src="skin:spacers/blocks.xml"/>
+		<Template src="skin:sampler/sampler.xml">
+			<SetVariable name="channel">[Sampler4]</SetVariable>
 		</Template>
 	</Children>
 </skin>

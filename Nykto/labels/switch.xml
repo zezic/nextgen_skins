@@ -15,12 +15,12 @@
 				<Children>
 					<Label>
 						<Size>f,f</Size>
-					    <Style> QLabel { font: 9px PT Mono; font-weight: bold; color: rgba(255,255,255,50%); text-align: center; padding-left: 1px; }</Style>
+					    <Style> QLabel { font: 9px PT Mono; font-weight: bold; color: rgba(255,255,255,50%); text-align: center; padding-left: 4px; }</Style>
 					    <Text><Variable name="text"/></Text>
 					</Label>
 					<Label>
 						<Size>f,f</Size>
-					    <Style> QLabel { font: 9px PT Mono; font-weight: bold; color: rgba(0,0,0,100%); text-align: center; padding-left: 1px; margin-bottom:3px;}</Style>
+					    <Style> QLabel { font: 9px PT Mono; font-weight: bold; color: rgba(0,0,0,100%); text-align: center; padding-left: 4px; margin-bottom:3px;}</Style>
 					    <Text><Variable name="text"/></Text>
 					</Label>
 				</Children>

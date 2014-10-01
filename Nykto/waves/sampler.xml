@@ -1,0 +1,31 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Sampler waveform overview.
+-->
+<Template>
+	<Overview>
+		<TooltipId>waveform_overview</TooltipId>
+		<Group><Variable name="channel"/></Group>
+		<Pos>40,25</Pos>
+		<Size>me,me</Size>
+		<MinimumSize>-1,40</MinimumSize>
+		<BgColor></BgColor>
+		<SignalHighColor></SignalHighColor>
+		<SignalMidColor></SignalMidColor>
+		<SignalLowColor></SignalLowColor>
+		<SignalColor>#777777</SignalColor>
+		<PlayPosColor>#DDDDDD</PlayPosColor>
+		<Align>top</Align>
+		<DefaultMark>
+			<Align>bottom</Align>
+			<Color>#00FF00</Color>
+			<TextColor>#FFFFFF</TextColor>
+			<Text> %1 </Text>
+		</DefaultMark>
+		<Connection>
+			<ConfigKey><Variable name="channel"/>,playposition</ConfigKey>
+			<EmitOnDownPress>false</EmitOnDownPress>
+		</Connection>
+	</Overview>
+</Template>

@@ -12,7 +12,7 @@ Description: Green button.
             <Template src="skin:labels/small_active.xml"/>
             <!-- <Template src="skin:buttons/darken.xml"/> -->
             <Template src="skin:buttons/symbol_calm.xml"/>
-            <Template src="skin:buttons/images/green.xml"/>
+            <Template src="skin:buttons/images/green-border.xml"/>
             <Template src="skin:buttons/background.xml"/>
         </Children>
     </WidgetGroup>

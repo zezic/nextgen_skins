@@ -1,0 +1,12 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Dark vertical separator.
+-->
+<Template>
+	<WidgetGroup>
+		<Style> QGroupBox { background-color: rgba(0,0,0,50%); } </Style>
+		<ObjectName>Separator</ObjectName>
+		<Size>2f,me</Size>
+	</WidgetGroup>
+</Template>

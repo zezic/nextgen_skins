@@ -1,0 +1,80 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Sampler waveform overview.
+-->
+<Template>
+	<WidgetGroup>
+		<Layout>vertical</Layout>
+		<Size>f,f</Size>
+		<Children>
+			<WidgetGroup>
+				<Size>me,2f</Size>
+				<Style>QGroupBox {
+				    border-top: 1px;
+				    border-bottom: 1px;
+				    border-left: 2px;
+				    border-right: 2px;
+				    border-image: url(skin:decorations/images/top-recess.svg); }
+				</Style>
+			</WidgetGroup>
+			<WidgetGroup>
+				<Layout>horizontal</Layout>
+				<Size>f,f</Size>
+				<Children>
+					<Template src="skin:spacers/separator-vertical-dark.xml"/>
+					<Template src="skin:buttons/borderless-red.xml">
+						<SetVariable name="size">23f,23f</SetVariable>
+						<SetVariable name="states">2</SetVariable>
+						<SetVariable name="text">1</SetVariable>
+						<SetVariable name="image"></SetVariable>
+						<SetVariable name="leftclick">hotcue_1_activate</SetVariable>
+						<SetVariable name="rightclick">hotcue_1_clear</SetVariable>
+						<SetVariable name="indicator">hotcue_1_enabled</SetVariable>
+					</Template>
+					<Template src="skin:spacers/separator-vertical-dark.xml"/>
+					<Template src="skin:buttons/borderless-yellow.xml">
+						<SetVariable name="size">23f,23f</SetVariable>
+						<SetVariable name="states">2</SetVariable>
+						<SetVariable name="text">2</SetVariable>
+						<SetVariable name="image"></SetVariable>
+						<SetVariable name="leftclick">hotcue_2_activate</SetVariable>
+						<SetVariable name="rightclick">hotcue_2_clear</SetVariable>
+						<SetVariable name="indicator">hotcue_2_enabled</SetVariable>
+					</Template>
+					<Template src="skin:spacers/separator-vertical-dark.xml"/>
+					<Template src="skin:buttons/borderless-green.xml">
+						<SetVariable name="size">23f,23f</SetVariable>
+						<SetVariable name="states">2</SetVariable>
+						<SetVariable name="text">3</SetVariable>
+						<SetVariable name="image"></SetVariable>
+						<SetVariable name="leftclick">hotcue_3_activate</SetVariable>
+						<SetVariable name="rightclick">hotcue_3_clear</SetVariable>
+						<SetVariable name="indicator">hotcue_3_enabled</SetVariable>
+					</Template>
+					<Template src="skin:spacers/separator-vertical-dark.xml"/>
+					<Template src="skin:buttons/borderless-blue.xml">
+						<SetVariable name="size">23f,23f</SetVariable>
+						<SetVariable name="states">2</SetVariable>
+						<SetVariable name="text">4</SetVariable>
+						<SetVariable name="image"></SetVariable>
+						<SetVariable name="leftclick">hotcue_4_activate</SetVariable>
+						<SetVariable name="rightclick">hotcue_4_clear</SetVariable>
+						<SetVariable name="indicator">hotcue_4_enabled</SetVariable>
+					</Template>
+					<Template src="skin:spacers/separator-vertical-dark.xml"/>
+				</Children>
+			</WidgetGroup>
+			<WidgetGroup>
+				<Size>me,2f</Size>
+				<Style>QGroupBox {
+				    border-top: 1px;
+				    border-bottom: 1px;
+				    border-left: 2px;
+				    border-right: 2px;
+				    border-image: url(skin:decorations/images/bottom-recess.svg); }
+				</Style>
+			</WidgetGroup>
+		</Children>
+	</WidgetGroup>
+</Template>

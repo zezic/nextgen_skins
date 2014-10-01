@@ -1,0 +1,12 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Between blocks spacer.
+-->
+<Template>
+	<WidgetGroup>
+		<Style> QGroupBox { background-color: transparent; } </Style>
+		<ObjectName>Spacer</ObjectName>
+		<Size><Variable name="block_spacing"/></Size>
+	</WidgetGroup>
+</Template>

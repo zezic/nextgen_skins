@@ -24,252 +24,259 @@
 						</Children>
 					</WidgetGroup>
 					<WidgetGroup>
-						<Layout>horizontal</Layout>
-						<Size>me,me</Size>
+						<Layout>vertical</Layout>
 						<Style> QGroupBox { background-color: #303030; } </Style>
 						<Children>
-
-							<!-- Play, Gain+Overload, PFL -->
-
+							<Template src="skin:spacers/dynamic.xml"/>
 							<WidgetGroup>
-								<Layout>vertical</Layout>
-								<Size>f,me</Size>
-								<Style> QGroupBox { background: transparent; } </Style>
-								<Children>
-									<Template src="skin:buttons/green.xml">
-										<SetVariable name="size">42f,22f</SetVariable>
-										<SetVariable name="states">1</SetVariable>
-										<SetVariable name="text"></SetVariable>
-										<SetVariable name="image">play-sampler</SetVariable>
-										<SetVariable name="leftclick">start_play</SetVariable>
-										<SetVariable name="rightclick">start_stop</SetVariable>
-										<SetVariable name="indicator">play_indicator</SetVariable>
-									</Template>
-									<Template src="skin:spacers/expander-vertical.xml"/>
-									<Template src="skin:knobs/knob-overload.xml">
-										<SetVariable name="color">red</SetVariable>
-										<SetVariable name="control">pregain</SetVariable>
-										<SetVariable name="text">GAIN</SetVariable>
-									</Template>
-									<Template src="skin:spacers/expander-vertical.xml"/>
-									<WidgetGroup>
-										<Layout>horizontal</Layout>
-										<Children>
-											<Template src="skin:buttons/green-nodark.xml">
-												<SetVariable name="size">42f,22f</SetVariable>
-												<SetVariable name="states">2</SetVariable>
-												<SetVariable name="text">PFL</SetVariable>
-												<SetVariable name="image"></SetVariable>
-												<SetVariable name="leftclick">pfl</SetVariable>
-												<SetVariable name="rightclick"></SetVariable>
-												<SetVariable name="indicator">pfl</SetVariable>
-											</Template>
-										</Children>
-									</WidgetGroup>
-								</Children>
-							</WidgetGroup>
-
-							<!-- Waveform, Title+Eject, BPM+Sync, Repeat, Keylock, Orientation, Hotcues -->
-
-							<WidgetGroup>
-								<Layout>vertical</Layout>
+								<Layout>horizontal</Layout>
 								<Size>me,me</Size>
-								<Style> QGroupBox { background: transparent; } </Style>
 								<Children>
+									<Template src="skin:spacers/dynamic.xml"/>
+									<!-- Play, Gain+Overload, PFL -->
+
 									<WidgetGroup>
 										<Layout>vertical</Layout>
-										<Size>me,me</Size>
-										<Style>QGroupBox {
-										    border-top: 4px;
-										    border-bottom: 4px;
-										    border-left: 4px;
-										    border-right: 4px;
-										    border-image: url(skin:backgrounds/recess.svg); }
-										</Style>
+										<Size>f,me</Size>
+										<Style> QGroupBox { background: transparent; } </Style>
 										<Children>
-											<WidgetGroup> <!-- It's style delimiter  -->
-												<Layout>vertical</Layout>
-												<Size>me,me</Size>
-												<Style>QGroupBox {
-												    border-top: 0px;
-												    border-bottom: 0px;
-												    border-left: 0px;
-												    border-right: 0px;
-												    border-image: none; }
-												</Style>
-												<Children>
-
-													<!-- Title+Eject, BPM+Sync -->
-
-													<WidgetGroup>
-														<Layout>vertical</Layout>
-														<Size>me,f</Size>
-														<Children>
-															<WidgetGroup>
-																<Layout>horizontal</Layout>
-																<Size>me,21f</Size>
-																<Children>
-																	<WidgetGroup>
-																		<ObjectName>SamplerTitle</ObjectName>
-																		<Layout>stacked</Layout>
-																		<Size>i,f</Size>
-																		<Children>
-																			<Template src="skin:buttons/push.xml">
-																				<SetVariable name="states">1</SetVariable>
-																				<SetVariable name="leftclick">eject</SetVariable>
-																				<SetVariable name="rightclick">eject</SetVariable>
-																			</Template>
-																			<WidgetGroup>
-																				<Layout>horizontal</Layout>
-																				<Size>me,me</Size>
-																				<Children>
-																					<WidgetGroup>
-																						<Size>me,me</Size>
-																					</WidgetGroup>
-																					<WidgetGroup>
-																						<Layout>horizontal</Layout>
-																						<Size>20f,me</Size>
-																						<Style> QGroupBox { background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,0,0,0), stop:1 rgb(24, 24, 24, 255)); } </Style>
-																					</WidgetGroup>
-																				</Children>
-																			</WidgetGroup>
-														                    <TrackProperty>
-														                      <TooltipId>track_title</TooltipId>
-														                      <SizePolicy>me,min</SizePolicy>
-														                      <Property>title</Property>
-														                      <Group><Variable name="channel"/></Group>
-														                    </TrackProperty>
-																		</Children>
-																	</WidgetGroup>
-																	<Template src="skin:spacers/separator-vertical.xml"/>
-																	<WidgetGroup>
-																		<ObjectName>SamplerBPM</ObjectName>
-																		<Layout>stacked</Layout>
-																		<Size>57f,me</Size>
-																		<Children>
-																			<Template src="skin:buttons/push.xml">
-																				<SetVariable name="states">1</SetVariable>
-																				<SetVariable name="leftclick">beatsync</SetVariable>
-																				<SetVariable name="rightclick">beatsync_tempo</SetVariable>
-																			</Template>
-																			<NumberBpm>
-																				<TooltipId>visual_bpm</TooltipId>
-																				<Group><Variable name="channel"/></Group>
-																				<Alignment>center</Alignment>
-																				<Connection>
-																					<ConfigKey><Variable name="channel"/>,visual_bpm</ConfigKey>
-																				</Connection>
-																			</NumberBpm>
-																			<Template src="skin:buttons/images/grey.xml">
-																				<SetVariable name="states">1</SetVariable>
-																				<SetVariable name="indicator">beatsync</SetVariable>
-																			</Template>
-																			<Template src="skin:buttons/images/grey.xml">
-																				<SetVariable name="states">1</SetVariable>
-																				<SetVariable name="indicator">beatsync_tempo</SetVariable>
-																			</Template>
-																		</Children>
-																	</WidgetGroup>
-
-																</Children>
-															</WidgetGroup>
-															<Template src="skin:spacers/separator-horizontal.xml"/>
-														</Children>
-													</WidgetGroup>
-													<WidgetGroup>
-														<Layout>horizontal</Layout>
-														<Size>me,me</Size>
-														<Children>
-															<Overview>
-																<TooltipId>waveform_overview</TooltipId>
-																<Group><Variable name="channel"/></Group>
-																<Pos>40,25</Pos>
-																<Size>me,me</Size>
-																<BgColor></BgColor>
-																<SignalHighColor></SignalHighColor>
-																<SignalMidColor></SignalMidColor>
-																<SignalLowColor></SignalLowColor>
-																<SignalColor>#777777</SignalColor>
-																<PlayPosColor>#DDDDDD</PlayPosColor>
-																<Align>top</Align>
-																<DefaultMark>
-																	<Align>bottom</Align>
-																	<Color>#00FF00</Color>
-																	<TextColor>#FFFFFF</TextColor>
-																	<Text> %1 </Text>
-																</DefaultMark>
-																<Connection>
-																	<ConfigKey><Variable name="channel"/>,playposition</ConfigKey>
-																	<EmitOnDownPress>false</EmitOnDownPress>
-																</Connection>
-															</Overview>
-															<Template src="skin:spacers/separator-vertical.xml"/>
-															<WidgetGroup>
-																<Layout>vertical</Layout>
-																<Size>28f,me</Size>
-																<Children>
-																	<Template src="skin:buttons/lcd.xml">
-																		<SetVariable name="size">me,me</SetVariable>
-																		<SetVariable name="states">2</SetVariable>
-																		<SetVariable name="image">repeat</SetVariable>
-																		<SetVariable name="leftclick">repeat</SetVariable>
-																		<SetVariable name="rightclick"></SetVariable>
-																		<SetVariable name="indicator">repeat</SetVariable>
-																	</Template>
-																	<Template src="skin:spacers/separator-horizontal.xml"/>
-																	<Template src="skin:buttons/lcd.xml">
-																		<SetVariable name="size">me,me</SetVariable>
-																		<SetVariable name="states">2</SetVariable>
-																		<SetVariable name="image">keylock</SetVariable>
-																		<SetVariable name="leftclick">keylock</SetVariable>
-																		<SetVariable name="rightclick"></SetVariable>
-																		<SetVariable name="indicator">keylock</SetVariable>
-																	</Template>
-																</Children>
-															</WidgetGroup>
-														</Children>
-													</WidgetGroup>
-												</Children>
-											</WidgetGroup>
-										</Children>
-									</WidgetGroup>
-
-									<!-- Orientation, Hotcues -->
-
-									<WidgetGroup>
-										<Layout>horizontal</Layout>
-										<Size>f,f</Size>
-										<Children>
+											<Template src="skin:buttons/green.xml">
+												<SetVariable name="size">42f,22f</SetVariable>
+												<SetVariable name="states">1</SetVariable>
+												<SetVariable name="text"></SetVariable>
+												<SetVariable name="image">play-sampler</SetVariable>
+												<SetVariable name="leftclick">start_play</SetVariable>
+												<SetVariable name="rightclick">start_stop</SetVariable>
+												<SetVariable name="indicator">play_indicator</SetVariable>
+											</Template>
+											<Template src="skin:spacers/expander-vertical.xml"/>
+											<Template src="skin:knobs/knob-overload.xml">
+												<SetVariable name="color">red</SetVariable>
+												<SetVariable name="control">pregain</SetVariable>
+												<SetVariable name="text">GAIN</SetVariable>
+											</Template>
+											<Template src="skin:spacers/expander-vertical.xml"/>
 											<WidgetGroup>
-												<Layout>vertical</Layout>
-												<Size>45f,f</Size>
+												<Layout>horizontal</Layout>
 												<Children>
-													<Template src="skin:switches/switch3.xml">
-														<SetVariable name="size">45f,20f</SetVariable>
-														<SetVariable name="text">L - M - R</SetVariable>
-														<SetVariable name="leftclick">orientation</SetVariable>
-														<SetVariable name="rightclick">orientation</SetVariable>
-														<SetVariable name="indicator">orientation</SetVariable>
+													<Template src="skin:buttons/green-nodark.xml">
+														<SetVariable name="size">42f,22f</SetVariable>
+														<SetVariable name="states">2</SetVariable>
+														<SetVariable name="text">PFL</SetVariable>
+														<SetVariable name="image"></SetVariable>
+														<SetVariable name="leftclick">pfl</SetVariable>
+														<SetVariable name="rightclick"></SetVariable>
+														<SetVariable name="indicator">pfl</SetVariable>
 													</Template>
 												</Children>
 											</WidgetGroup>
+											<Template src="skin:spacers/dynamic.xml"/>
 										</Children>
 									</WidgetGroup>
+									<Template src="skin:spacers/dynamic.xml"/>
+
+									<!-- Waveform, Title+Eject, BPM+Sync, Repeat, Keylock, Orientation, Hotcues -->
+
+									<WidgetGroup>
+										<Layout>vertical</Layout>
+										<Size>me,me</Size>
+										<Style> QGroupBox { background: transparent; } </Style>
+										<Children>
+											<WidgetGroup>
+												<Layout>horizontal</Layout>
+												<Size>me,me</Size>
+												<Style>QGroupBox {
+												    border-top: 4px;
+												    border-bottom: 4px;
+												    border-left: 4px;
+												    border-right: 4px;
+												    border-image: url(skin:backgrounds/recess.svg); }
+												</Style>
+												<Children>
+													<Template src="skin:spacers/2px.xml"/>
+													<WidgetGroup> <!-- It's style delimiter  -->
+														<Layout>vertical</Layout>
+														<Size>me,me</Size>
+														<Style>QGroupBox {
+														    border-top: 0px;
+														    border-bottom: 0px;
+														    border-left: 0px;
+														    border-right: 0px;
+														    border-image: none; }
+														</Style>
+														<Children>
+															<Template src="skin:spacers/2px.xml"/>
+
+															<!-- Title+Eject, BPM+Sync -->
+
+															<WidgetGroup>
+																<Layout>vertical</Layout>
+																<Size>me,f</Size>
+																<Children>
+																	<WidgetGroup>
+																		<Layout>horizontal</Layout>
+																		<Size>me,21f</Size>
+																		<Children>
+																			<WidgetGroup>
+																				<ObjectName>SamplerTitle</ObjectName>
+																				<Layout>stacked</Layout>
+																				<Size>i,f</Size>
+																				<Children>
+																					<Template src="skin:buttons/push.xml">
+																						<SetVariable name="states">1</SetVariable>
+																						<SetVariable name="leftclick">eject</SetVariable>
+																						<SetVariable name="rightclick">eject</SetVariable>
+																					</Template>
+																					<WidgetGroup>
+																						<Layout>horizontal</Layout>
+																						<Size>me,me</Size>
+																						<Children>
+																							<WidgetGroup>
+																								<Size>me,me</Size>
+																							</WidgetGroup>
+																							<WidgetGroup>
+																								<Layout>horizontal</Layout>
+																								<Size>20f,me</Size>
+																								<Style> QGroupBox { background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0,0,0,0), stop:1 rgb(24, 24, 24, 255)); } </Style>
+																							</WidgetGroup>
+																						</Children>
+																					</WidgetGroup>
+																                    <TrackProperty>
+																                      <TooltipId>track_title</TooltipId>
+																                      <SizePolicy>me,min</SizePolicy>
+																                      <Property>title</Property>
+																                      <Group><Variable name="channel"/></Group>
+																                    </TrackProperty>
+																				</Children>
+																			</WidgetGroup>
+																			<Template src="skin:spacers/separator-vertical.xml"/>
+																			<WidgetGroup>
+																				<ObjectName>SamplerBPM</ObjectName>
+																				<Layout>stacked</Layout>
+																				<Size>57f,me</Size>
+																				<Children>
+																					<Template src="skin:buttons/push.xml">
+																						<SetVariable name="states">1</SetVariable>
+																						<SetVariable name="leftclick">beatsync</SetVariable>
+																						<SetVariable name="rightclick">beatsync_tempo</SetVariable>
+																					</Template>
+																					<NumberBpm>
+																						<TooltipId>visual_bpm</TooltipId>
+																						<Group><Variable name="channel"/></Group>
+																						<Alignment>center</Alignment>
+																						<Connection>
+																							<ConfigKey><Variable name="channel"/>,visual_bpm</ConfigKey>
+																						</Connection>
+																					</NumberBpm>
+																					<Template src="skin:buttons/images/grey.xml">
+																						<SetVariable name="states">1</SetVariable>
+																						<SetVariable name="indicator">beatsync</SetVariable>
+																					</Template>
+																					<Template src="skin:buttons/images/grey.xml">
+																						<SetVariable name="states">1</SetVariable>
+																						<SetVariable name="indicator">beatsync_tempo</SetVariable>
+																					</Template>
+																				</Children>
+																			</WidgetGroup>
+																		</Children>
+																	</WidgetGroup>
+																	<Template src="skin:spacers/separator-horizontal.xml"/>
+																</Children>
+															</WidgetGroup>
+															<WidgetGroup>
+																<Layout>horizontal</Layout>
+																<Size>me,me</Size>
+																<Children>
+																	<Template src="skin:waves/sampler.xml"/>
+																	<Template src="skin:spacers/separator-vertical.xml"/>
+																	<WidgetGroup>
+																		<Layout>vertical</Layout>
+																		<Size>28f,me</Size>
+																		<Children>
+																			<Template src="skin:buttons/lcd.xml">
+																				<SetVariable name="size">me,me</SetVariable>
+																				<SetVariable name="states">2</SetVariable>
+																				<SetVariable name="image">repeat</SetVariable>
+																				<SetVariable name="leftclick">repeat</SetVariable>
+																				<SetVariable name="rightclick"></SetVariable>
+																				<SetVariable name="indicator">repeat</SetVariable>
+																			</Template>
+																			<Template src="skin:spacers/separator-horizontal.xml"/>
+																			<Template src="skin:buttons/lcd.xml">
+																				<SetVariable name="size">me,me</SetVariable>
+																				<SetVariable name="states">2</SetVariable>
+																				<SetVariable name="image">keylock</SetVariable>
+																				<SetVariable name="leftclick">keylock</SetVariable>
+																				<SetVariable name="rightclick"></SetVariable>
+																				<SetVariable name="indicator">keylock</SetVariable>
+																			</Template>
+																		</Children>
+																	</WidgetGroup>
+																</Children>
+															</WidgetGroup>
+															<Template src="skin:spacers/2px.xml"/>
+														</Children>
+													</WidgetGroup>
+													<Template src="skin:spacers/2px.xml"/>
+												</Children>
+											</WidgetGroup>
+
+											<!-- Orientation, Hotcues -->
+											<WidgetGroup>
+												<Layout>vertical</Layout>
+												<Size>f,f</Size>
+												<Children>
+													<Template src="skin:spacers/dynamic.xml"/>
+													<WidgetGroup>
+														<Layout>horizontal</Layout>
+														<Size>f,f</Size>
+														<Children>
+															<Template src="skin:switches/switch3.xml">
+																<SetVariable name="size">45f,20f</SetVariable>
+																<SetVariable name="text">L - M - R</SetVariable>
+																<SetVariable name="leftclick">orientation</SetVariable>
+																<SetVariable name="rightclick">orientation</SetVariable>
+																<SetVariable name="indicator">orientation</SetVariable>
+															</Template>
+															<Template src="skin:spacers/dynamic.xml"/>
+															<WidgetGroup>
+																<Layout>vertical</Layout>
+																<Size>f,d</Size>
+																<Children>
+																	<Template src="skin:hotcues/horizontal.xml"/>
+																	<Template src="skin:spacers/expander-vertical.xml"/>
+																</Children>
+															</WidgetGroup>
+														</Children>
+													</WidgetGroup>
+												</Children>
+											</WidgetGroup>
+										</Children>
+									</WidgetGroup>
+
+									<!-- Tempo slider -->
+									<WidgetGroup>
+										<Layout>vertical</Layout>
+										<Size>f,me</Size>
+		  								<Children>
+											<WidgetGroup>
+												<Layout>horizontal</Layout>
+												<Size>f,me</Size>
+				  								<Children>
+				  									<Template src="skin:spacers/dynamic.xml"/>
+													<Template src="skin:sliders/small.xml">
+														<SetVariable name="size">22f,me</SetVariable>
+														<SetVariable name="parameter">rate</SetVariable>
+													</Template>
+												</Children>
+											</WidgetGroup>
+											<Template src="skin:spacers/dynamic.xml"/>
+										</Children>
+									</WidgetGroup>
+									<Template src="skin:spacers/dynamic.xml"/>
 								</Children>
 							</WidgetGroup>
-
-							<!-- Tempo slider -->
-
-							<WidgetGroup>
-								<Layout>vertical</Layout>
-								<Size>f,me</Size>
-  								<Children>
-									<Template src="skin:sliders/small.xml">
-										<SetVariable name="size">22f,me</SetVariable>
-										<SetVariable name="parameter">rate</SetVariable>
-									</Template>
-								</Children>
-							</WidgetGroup>
+							<!-- <Template src="skin:spacers/dynamic.xml"/> -->
 						</Children>
 					</WidgetGroup>
 					<Template src="skin:decorations/bottom-shadow.xml"/>

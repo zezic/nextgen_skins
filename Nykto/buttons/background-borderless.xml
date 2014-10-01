@@ -1,0 +1,16 @@
+<!DOCTYPE template>
+<!--
+Description: Button borderless background.
+-->
+<Template>
+    <WidgetGroup>
+        <Size>me,me</Size>
+        <Style>QGroupBox {
+            border-top: 1px;
+            border-bottom: 1px;
+            border-left: 0px;
+            border-right: 0px;
+            border-image: url(skin:buttons/images/borderless.svg); }
+        </Style>
+    </WidgetGroup>
+</Template>

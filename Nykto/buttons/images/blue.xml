@@ -1,12 +1,12 @@
 <!DOCTYPE template>
 <!--
-Description: Red overlay.
+Description: Blue overlay.
 -->
 <Template>
     <WidgetGroup>
         <Size>me,me</Size>
         <Style>QGroupBox {
-            background-color: #FF3C54;
+            background-color: #3CD8FF;
             border-top: 2px solid rgba(0,0,0,20%); }
         </Style>
         <Connection>

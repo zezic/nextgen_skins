@@ -12,9 +12,5 @@ Description: Button background.
             border-right: 2px;
             border-image: url(skin:buttons/images/generic.svg); }
         </Style>
-        <Layout>vertical</Layout>
-        <Children>
-            
-        </Children>
     </WidgetGroup>
 </Template>
