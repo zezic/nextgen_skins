@@ -1,0 +1,118 @@
+<!DOCTYPE template>
+<!--
+Description:Checkbox.
+-->
+<Template>
+    <WidgetGroup>
+        <Layout>stacked</Layout>
+        <Size>f,f</Size>
+        <Style>QGroupBox {
+            border-top: 0px;
+            border-bottom: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-image: none; }
+        </Style>
+        <Children>
+            <PushButton>
+                <NumberStates>2</NumberStates>
+                <RightClickIsPushButton>true</RightClickIsPushButton>
+                <Size>me,me</Size>
+                <State>
+                    <Number>0</Number>
+                </State>
+                <State>
+                    <Number>1</Number>
+                </State>
+                <Connection>
+                    <ConfigKey persist="true"><Variable name="group"/>,<Variable name="showed"/></ConfigKey>
+                    <ButtonState>LeftButton</ButtonState>
+                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+                </Connection>
+                <Connection>
+                    <ConfigKey persist="true"><Variable name="group"/>,<Variable name="showed"/></ConfigKey>
+                    <ButtonState>RightButton</ButtonState>
+                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+                </Connection>
+            </PushButton>
+            <WidgetGroup>
+                <Layout>vertical</Layout>
+                <Children>
+                <WidgetGroup>
+                    <Layout>horizontal</Layout>
+                    <Children>
+                        <WidgetGroup>
+                            <Size>14f,14f</Size>
+                            <Style>QGroupBox {
+                                border-top: 3px;
+                                border-bottom: 3px;
+                                border-left: 3px;
+                                border-right: 3px;
+                                border-image: url(skin:buttons/images/blueprinted.svg); }
+                            </Style>
+                        </WidgetGroup>
+                        <Label>
+                            <Style> QLabel { font: 10px PT Mono; font-weight: bold; color: rgba(39,176,217,50%); text-align: left; padding-left: 1px; text-transform: uppercase; }</Style>
+                            <Text><Variable name="text"/></Text>
+                        </Label>
+                    </Children>
+                    <Connection>
+                        <ConfigKey><Variable name="group"/>,<Variable name="showed"/></ConfigKey>
+                        <BindProperty>visible</BindProperty>
+                        <Transform>
+                            <Invert/>
+                            <Add>1</Add>
+                        </Transform>
+                    </Connection>
+                </WidgetGroup>
+                <WidgetGroup>
+                    <Layout>horizontal</Layout>
+                    <Children>
+                        <WidgetGroup>
+                            <Size>14f,14f</Size>
+                            <Style>QGroupBox {
+                                border-top: 3px;
+                                border-bottom: 3px;
+                                border-left: 3px;
+                                border-right: 3px;
+                                border-image: url(skin:buttons/images/blueprinted-active.svg); }
+                            </Style>
+                            <Layout>vertical</Layout>
+                            <Children>
+                                <PushButton>
+                                    <NumberStates>1</NumberStates>
+                                    <RightClickIsPushButton>true</RightClickIsPushButton>
+                                    <State>
+                                        <Number>0</Number>
+                                        <Pressed>buttons/images/check.svg</Pressed>
+                                        <UnPressed>buttons/images/check.svg</UnPressed>
+                                    </State>
+                                    <Connection>
+                                        <ConfigKey persist="true"><Variable name="group"/>,<Variable name="showed"/></ConfigKey>
+                                        <ButtonState>LeftButton</ButtonState>
+                                        <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+                                    </Connection>
+                                    <Connection>
+                                        <ConfigKey persist="true"><Variable name="group"/>,<Variable name="showed"/></ConfigKey>
+                                        <ButtonState>RightButton</ButtonState>
+                                        <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+                                    </Connection>
+                                </PushButton>
+                            </Children>
+                        </WidgetGroup>
+                        <Label>
+                            <Style> QLabel { font: 10px PT Mono; font-weight: bold; color: rgba(39,176,217,100%); text-align: left; padding-left: 1px; text-transform: uppercase; }</Style>
+                            <Text><Variable name="text"/></Text>
+                        </Label>
+                    </Children>
+                    <Connection>
+                        <ConfigKey persist="true"><Variable name="group"/>,<Variable name="showed"/></ConfigKey>
+                        <BindProperty>visible</BindProperty>
+                    </Connection>
+                </WidgetGroup>
+                <Template src="skin:spacers/2px.xml"/>
+                </Children>
+            </WidgetGroup>
+        </Children>
+    </WidgetGroup>
+</Template>

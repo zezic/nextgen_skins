@@ -1,0 +1,214 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Tiny sampler.
+-->
+<Template>
+	<WidgetGroup>
+		<Layout>stacked</Layout>
+		<Children>
+			<WidgetGroup>
+				<ObjectName>SamplerTiny</ObjectName>
+				<Layout>vertical</Layout>
+				<Size>me,me</Size>
+				<Children>
+					<WidgetGroup>
+						<Style> QGroupBox { background-color: #F1AD0D; } </Style>
+						<Layout>horizontal</Layout>
+						<Children>
+							<Template src="skin:indicators/vumeter/vumeter-stereo.xml">
+								<SetVariable name="color">#F1AD0D</SetVariable>
+							</Template>
+						</Children>
+					</WidgetGroup>
+					<WidgetGroup>
+						<Layout>horizontal</Layout>
+						<Size>me,me</Size>
+						<Style> QGroupBox { background-color: #303030; } </Style>
+						<Children>
+							<Template src="skin:spacers/dynamic-small.xml"/>
+							<WidgetGroup>
+								<Layout>vertical</Layout>
+								<Size>me,me</Size>
+								<Children>
+									<Template src="skin:spacers/dynamic-small.xml"/>
+									<WidgetGroup>
+										<Size>me,2f</Size>
+										<Style>QGroupBox {
+										    border-top: 1px;
+										    border-bottom: 1px;
+										    border-left: 2px;
+										    border-right: 2px;
+										    border-image: url(skin:decorations/images/top-recess.svg); }
+										</Style>
+									</WidgetGroup>
+									<WidgetGroup>
+										<Layout>horizontal</Layout>
+										<Size>me,me</Size>
+										<Style>QGroupBox {
+										    background: none; }
+										</Style>
+										<Children>
+											<Template src="skin:spacers/separator-vertical-dark.xml"/>
+											<Template src="skin:buttons/borderless-green.xml">
+												<SetVariable name="size">42f,me</SetVariable>
+												<SetVariable name="maximumsize">42,-1</SetVariable>
+												<SetVariable name="minimumsize">42,42</SetVariable>
+												<SetVariable name="states">1</SetVariable>
+												<SetVariable name="text"></SetVariable>
+												<SetVariable name="image">play-sampler</SetVariable>
+												<SetVariable name="leftclick">start_play</SetVariable>
+												<SetVariable name="rightclick">start_stop</SetVariable>
+												<SetVariable name="indicator">play_indicator</SetVariable>
+											</Template>
+											<Template src="skin:spacers/separator-vertical-dark.xml"/>
+											<WidgetGroup>
+												<Layout>horizontal</Layout>
+												<Size>me,me</Size>
+												<Style> QGroupBox { background-color: rgba(0,0,0,50%); } </Style>
+												<MinimumSize>42,42</MinimumSize>
+												<Children>
+													<Template src="skin:waves/sampler.xml"/>
+												</Children>
+											</WidgetGroup>
+											<Template src="skin:spacers/separator-vertical-dark.xml"/>
+										</Children>
+									</WidgetGroup>
+									<WidgetGroup>
+										<Size>me,2f</Size>
+										<Style>QGroupBox {
+										    border-top: 1px;
+										    border-bottom: 1px;
+										    border-left: 2px;
+										    border-right: 2px;
+										    border-image: url(skin:decorations/images/bottom-recess.svg); }
+										</Style>
+									</WidgetGroup>
+									<Template src="skin:spacers/4px.xml"/>
+								</Children>
+							</WidgetGroup>
+							<Template src="skin:spacers/dynamic-small.xml"/>
+						</Children>
+					</WidgetGroup>
+					<Template src="skin:decorations/bottom-shadow.xml"/>
+				</Children>
+				<Connection>
+				    <ConfigKey>[Global],blueprint</ConfigKey>
+				    <BindProperty>visible</BindProperty>
+				    <Transform>
+				        <Invert/>
+				        <Add>1</Add>
+				    </Transform>
+				</Connection>
+			</WidgetGroup>
+
+			<!-- Blueprinted -->
+
+			<WidgetGroup>
+				<ObjectName>SamplerTiny</ObjectName>
+				<Layout>vertical</Layout>
+				<Size>me,me</Size>
+				<Style>QGroupBox {
+				    border-top: 3px;
+				    border-bottom: 3px;
+				    border-left: 3px;
+				    border-right: 3px;
+				    border-image: url(skin:buttons/images/blueprinted.svg); }
+				</Style>
+				<Children>
+					<WidgetGroup>
+						<Layout>vertical</Layout>
+						<Size>me,me</Size>
+						<Style>QGroupBox {
+						    border-top: 0px;
+						    border-bottom: 0px;
+						    border-left: 0px;
+						    border-right: 0px;
+						    border-image: none; }
+						</Style>
+						<Children>
+							<WidgetGroup>
+								<Layout>horizontal</Layout>
+								<Children>
+									<Template src="skin:spacers/separator-horizontal-transparent.xml"/>
+								</Children>
+							</WidgetGroup>
+							<WidgetGroup>
+								<Layout>horizontal</Layout>
+								<Size>me,me</Size>
+								<Children>
+									<Template src="skin:spacers/dynamic-small.xml"/>
+									<WidgetGroup>
+										<Layout>vertical</Layout>
+										<Size>me,me</Size>
+										<Children>
+											<Template src="skin:spacers/dynamic-small.xml"/>
+											<WidgetGroup>
+												<Size>me,2f</Size>
+											</WidgetGroup>
+											<WidgetGroup>
+												<Layout>horizontal</Layout>
+												<Size>me,me</Size>
+												<Style>QGroupBox {
+												    background: none; }
+												</Style>
+												<Children>
+													<Template src="skin:spacers/separator-vertical-transparent.xml"/>
+													<Template src="skin:buttons/blueprinted.xml">
+														<SetVariable name="size">42f,me</SetVariable>
+														<SetVariable name="maximumsize">42,-1</SetVariable>
+														<SetVariable name="minimumsize">42,42</SetVariable>
+													</Template>
+													<Template src="skin:spacers/separator-vertical-transparent.xml"/>
+													<WidgetGroup>
+														<Layout>horizontal</Layout>
+														<Size>me,me</Size>
+														<MinimumSize>42,42</MinimumSize>
+														<Children>
+															<WidgetGroup>
+															    <Size>me,me</Size>
+															    <MaximumSize>-1,-1</MaximumSize>
+															    <MinimumSize>-1,-1</MinimumSize>
+															    <Style>QGroupBox {
+															        border-top: 3px;
+															        border-bottom: 3px;
+															        border-left: 3px;
+															        border-right: 3px;
+															        border-image: url(skin:buttons/images/blueprinted.svg); }
+															    </Style>
+															    <Layout>horizontal</Layout>
+															    <Children>
+															    	<Template src="skin:buttons/checkbox-personal.xml">
+															    		<SetVariable name="showed">tiny</SetVariable>
+															    		<SetVariable name="text">Tiny</SetVariable>
+															    	</Template>
+															    </Children>
+															</WidgetGroup>
+														</Children>
+													</WidgetGroup>
+													<Template src="skin:spacers/separator-vertical-transparent.xml"/>
+												</Children>
+											</WidgetGroup>
+											<Template src="skin:spacers/separator-horizontal-transparent.xml"/>
+											<Template src="skin:spacers/4px.xml"/>
+										</Children>
+									</WidgetGroup>
+									<Template src="skin:spacers/dynamic-small.xml"/>
+								</Children>
+							</WidgetGroup>
+							<Template src="skin:spacers/4px.xml"/>
+						</Children>
+					</WidgetGroup>
+				</Children>
+				<Connection>
+				    <ConfigKey>[Global],blueprint</ConfigKey>
+				    <BindProperty>visible</BindProperty>
+				</Connection>
+			</WidgetGroup>
+		</Children>
+		<Connection>
+		    <ConfigKey persist="true"><Variable name="channel"/>,tiny</ConfigKey>
+		    <BindProperty>visible</BindProperty>
+		</Connection>
+	</WidgetGroup>
+</Template>

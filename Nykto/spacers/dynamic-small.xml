@@ -1,0 +1,12 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Dynamic small spacer.
+-->
+<Template>
+	<WidgetGroup>
+		<Style> QGroupBox { background-color: transparent; } </Style>
+		<ObjectName>Spacer</ObjectName>
+		<Size><Variable name="global_small_spacing"/></Size>
+	</WidgetGroup>
+</Template>

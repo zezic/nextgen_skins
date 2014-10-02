@@ -1,0 +1,27 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Blueprinted knob.
+-->
+<Template>
+	<WidgetGroup>
+		<Layout>vertical</Layout>
+		<Size>42,f</Size>
+		<Children>
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<Size>42,42</Size>
+				<Children>
+					<WidgetGroup>
+						<Size>40f,40f</Size>
+						<Layout>vertical</Layout>
+						<Style> QGroupBox { background-image: url("skin:buttons/images/bluecircle.svg") ; } </Style>
+					</WidgetGroup>
+				</Children>
+			</WidgetGroup>
+			<Template src="skin:buttons/blueprinted.xml">
+				<SetVariable name="size">42f,9f</SetVariable>
+			</Template>
+		</Children>
+	</WidgetGroup>
+</Template>

@@ -1,0 +1,18 @@
+<!DOCTYPE template>
+<!--
+Description:Blueprinted button background.
+-->
+<Template>
+    <WidgetGroup>
+        <Size><Variable name="size"/></Size>
+        <MaximumSize><Variable name="maximumsize"/></MaximumSize>
+        <MinimumSize><Variable name="minimumsize"/></MinimumSize>
+        <Style>QGroupBox {
+            border-top: 3px;
+            border-bottom: 3px;
+            border-left: 3px;
+            border-right: 3px;
+            border-image: url(skin:buttons/images/blueprinted.svg); }
+        </Style>
+    </WidgetGroup>
+</Template>

@@ -5,6 +5,13 @@
 -->
 <Template>
 	<WidgetGroup>
+		<Style>QGroupBox {
+		    border-top: 0px;
+		    border-bottom: 0px;
+		    border-left: 0px;
+		    border-right: 0px;
+		    border-image: none; }
+		</Style>
 		<ObjectName>Spacer</ObjectName>
 		<Size>2f,2f</Size>
 	</WidgetGroup>

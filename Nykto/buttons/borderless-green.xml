@@ -6,6 +6,8 @@ Description: Green borderless button.
     <WidgetGroup>
         <Layout>stacked</Layout>
         <Size><Variable name="size"/></Size>
+        <MaximumSize><Variable name="maximumsize"/></MaximumSize>
+        <MinimumSize><Variable name="minimumsize"/></MinimumSize>
         <Children>
             <Template src="skin:buttons/push.xml"/>
             <Template src="skin:labels/medium_calm.xml"/>
