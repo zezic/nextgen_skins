@@ -1,0 +1,84 @@
+<!DOCTYPE template>
+<!--
+Description: 2 position switch.
+-->
+<Template>
+    <WidgetGroup>
+        <Layout>vertical</Layout>
+        <Size>f,f</Size>
+        <Style> QGroupBox { background: transparent; } </Style>
+        <Children>
+            <WidgetGroup>
+                <Layout>stacked</Layout>
+                <Size><Variable name="size"/></Size>
+                <Children>
+                    <Template src="skin:buttons/push.xml">
+                        <SetVariable name="size">me,me</SetVariable>
+                        <SetVariable name="states">2</SetVariable>
+                    </Template>
+                    <WidgetGroup>
+                        <Layout>stacked</Layout>
+                        <Size>me,me</Size>
+                        <Children>
+                            <Template src="skin:buttons/push.xml">
+                                <SetVariable name="size">me,me</SetVariable>
+                                <SetVariable name="states">2</SetVariable>
+                            </Template>
+                            <WidgetGroup>
+                                <Layout>horizontal</Layout>
+                                <Size>me,me</Size>
+                                <Children>
+                                    <WidgetGroup>
+                                        <Size>me,me</Size>
+                                        <Layout>horizontal</Layout>
+                                        <Children>
+                                            <Template src="skin:switches/on.xml"/>
+                                        </Children>
+                                    </WidgetGroup>
+                                    <Template src="skin:switches/handle-small.xml"/>
+                                </Children>
+                                <Connection>
+                                    <ConfigKey persist="true"><Variable name="channel"/>,<Variable name="switch"/></ConfigKey>
+                                    <BindProperty>visible</BindProperty>
+                                </Connection>
+                            </WidgetGroup>
+                            <WidgetGroup>
+                                <Layout>horizontal</Layout>
+                                <Size><Variable name="size"/></Size>
+                                <Children>
+                                    <Template src="skin:switches/handle-small.xml"/>
+                                    <WidgetGroup>
+                                        <Size>me,me</Size>
+                                        <Layout>horizontal</Layout>
+                                        <Children>
+                                            <WidgetGroup>
+                                                <Size>12f,10f</Size>
+                                                <Style> QGroupBox { margin-right: 2px; background-image: url("skin:switches/images/off.svg"); } </Style>
+                                            </WidgetGroup>
+                                        </Children>
+                                    </WidgetGroup>
+                                </Children>
+                                <Connection>
+                                    <ConfigKey persist="true"><Variable name="channel"/>,<Variable name="switch"/></ConfigKey>
+                                    <BindProperty>visible</BindProperty>
+                                    <Transform>
+                                        <Invert/>
+                                        <Add>1</Add>
+                                    </Transform>
+                                </Connection>
+                            </WidgetGroup>
+                        </Children>
+                    </WidgetGroup>
+                    <Template src="skin:switches/background.xml"/>
+                </Children>
+            </WidgetGroup>
+            <WidgetGroup>
+                <Size>me,f</Size>
+                <Layout>horizontal</Layout>
+                <Children>
+                    <Template src="skin:labels/switch.xml"/>
+                </Children>
+            </WidgetGroup>
+        </Children>
+    </WidgetGroup>
+</Template>

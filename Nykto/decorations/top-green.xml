@@ -1,0 +1,17 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    Top green.
+-->
+<Template>
+	<WidgetGroup>
+		<Size>me,2f</Size>
+		<Style>QGroupBox {
+			border-top: 1px;
+			border-bottom: 1px;
+			border-left: 2px;
+			border-right: 2px;
+			border-image: url(skin:decorations/images/top-green.svg); }
+		</Style>
+	</WidgetGroup>
+</Template>

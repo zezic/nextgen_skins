@@ -1,0 +1,86 @@
+<!DOCTYPE template>
+<!--
+Description: Global settings.
+-->
+<Template>
+	<WidgetGroup>
+		<Layout>vertical</Layout>
+		<Size>f,f</Size>
+		<Children>
+			<Template src="skin:decorations/top-gray.xml"/>
+			<WidgetGroup>
+				<Layout>horizontal</Layout>
+				<Size>f,f</Size>
+				<Style> QGroupBox { background-color: #303030; } </Style>
+				<Children>
+					<Template src="skin:spacers/dynamic.xml"/>
+					<WidgetGroup>
+						<Layout>vertical</Layout>
+						<Size>f,f</Size>
+						<Style> QGroupBox { background: transparent; } </Style>
+						<Children>
+							<Template src="skin:spacers/dynamic.xml"/>
+							<Template src="skin:buttons/green-nodark.xml">
+								<SetVariable name="size">30f,30f</SetVariable>
+								<SetVariable name="states">2</SetVariable>
+								<SetVariable name="text"></SetVariable>
+								<SetVariable name="image">settings</SetVariable>
+								<SetVariable name="channel">[Global]</SetVariable>
+								<SetVariable name="leftclick">blueprint</SetVariable>
+								<SetVariable name="rightclick">none</SetVariable>
+								<SetVariable name="indicator">blueprint</SetVariable>
+							</Template>
+							<Template src="skin:spacers/dynamic-small.xml"/>
+						</Children>
+					</WidgetGroup>
+					<Template src="skin:spacers/dynamic.xml"/>
+					<WidgetGroup>
+						<Layout>vertical</Layout>
+						<Size>f,f</Size>
+						<Style> QGroupBox { background: transparent; } </Style>
+						<Children>
+							<Template src="skin:spacers/dynamic.xml"/>
+							<Template src="skin:switches/switch2.xml">
+								<SetVariable name="size">34f,20f</SetVariable>
+								<SetVariable name="text">BGLIB</SetVariable>
+								<SetVariable name="leftclick">biglib</SetVariable>
+								<SetVariable name="rightclick">biglib</SetVariable>
+								<SetVariable name="switch">biglib</SetVariable>
+							</Template>
+							<Template src="skin:spacers/expander-vertical.xml"/>
+						</Children>
+					</WidgetGroup>
+					<Template src="skin:spacers/dynamic.xml"/>
+					<WidgetGroup>
+						<Layout>vertical</Layout>
+						<Size>f,me</Size>
+						<Style> QGroupBox { background: transparent; } </Style>
+						<Children>
+							<Template src="skin:spacers/dynamic.xml"/>
+							<WidgetGroup>
+								<Layout>vertical</Layout>
+								<Size>60f,me</Size>
+								<Style> QGroupBox { background-color: rgba(0,0,0,50%); border-radius: 2px; } </Style>
+								<Children>
+									<Template src="skin:spacers/expander-vertical.xml"/>
+									<Time>
+									    <TooltipId>time</TooltipId>
+									    <Style> QLabel { font: bold 15px Felipe;background-color: transparent; color: rgba(255,255,255,50%); text-align: center; padding-left: 1px; } </Style>
+									    <!-- <Size>W,H</Size> -->
+									    <ShowSeconds>false</ShowSeconds>
+									    <ClockFormat>24</ClockFormat>
+									</Time>
+									<Template src="skin:spacers/expander-vertical.xml"/>
+								</Children>
+							</WidgetGroup>
+							<Template src="skin:spacers/dynamic-small.xml"/>
+						</Children>
+					</WidgetGroup>
+					<Template src="skin:spacers/dynamic.xml"/>
+				</Children>
+			</WidgetGroup>
+			<Template src="skin:decorations/bottom-shadow.xml"/>
+		</Children>
+	</WidgetGroup>
+	<Template src="skin:spacers/blocks.xml"/>
+</Template>

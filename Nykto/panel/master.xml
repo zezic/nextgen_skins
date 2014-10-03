@@ -1,0 +1,74 @@
+<!DOCTYPE template>
+<!--
+Description: Headphones settings.
+-->
+<Template>
+	<WidgetGroup>
+		<Layout>horizontal</Layout>
+		<Size>f,me</Size>
+		<Children>
+			<SetVariable name="channel">[Master]</SetVariable>
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<Children>
+					<WidgetGroup>
+						<Style> QGroupBox { background-color: #FFFFFF; } </Style>
+						<Layout>horizontal</Layout>
+						<Children>
+							<Template src="skin:indicators/vumeter/vumeter-stereo.xml">
+								<SetVariable name="color">#FFFFFF</SetVariable>
+							</Template>
+						</Children>
+					</WidgetGroup>
+					<WidgetGroup>
+						<Layout>horizontal</Layout>
+						<Size>f,me</Size>
+						<Style> QGroupBox { background-color: #303030; } </Style>
+						<Children>
+							<Template src="skin:spacers/dynamic-small.xml"/>
+							<WidgetGroup>
+								<Size>24f,9f</Size>
+								<Style> QGroupBox { background-image: url("skin:labels/balance.svg"); } </Style>
+							</WidgetGroup>
+							<Template src="skin:spacers/dynamic-small.xml"/>
+							<WidgetGroup>
+								<Layout>vertical</Layout>
+								<Size>f,me</Size>
+								<Style> QGroupBox { background: transparent; } </Style>
+								<Children>
+									<Template src="skin:spacers/expander-vertical.xml"/>
+									<Template src="skin:knobs/knob.xml">
+										<SetVariable name="color">white</SetVariable>
+										<SetVariable name="control">balance</SetVariable>
+										<SetVariable name="text">BALANCE</SetVariable>
+									</Template>
+								</Children>
+							</WidgetGroup>
+							<Template src="skin:spacers/4px.xml"/>
+							<WidgetGroup>
+								<Layout>vertical</Layout>
+								<Size>f,me</Size>
+								<Style> QGroupBox { background: transparent; } </Style>
+								<Children>
+									<Template src="skin:spacers/expander-vertical.xml"/>
+									<Template src="skin:knobs/knob-overload-full.xml">
+										<SetVariable name="color">white</SetVariable>
+										<SetVariable name="control">volume</SetVariable>
+										<SetVariable name="text">VOLUME</SetVariable>
+									</Template>
+								</Children>
+							</WidgetGroup>
+							<Template src="skin:spacers/dynamic-small.xml"/>
+							<WidgetGroup>
+								<Size>22f,11f</Size>
+								<Style> QGroupBox { background-image: url("skin:labels/output.svg"); } </Style>
+							</WidgetGroup>
+							<Template src="skin:spacers/dynamic-small.xml"/>
+						</Children>
+					</WidgetGroup>
+					<Template src="skin:decorations/bottom-shadow.xml"/>
+				</Children>
+			</WidgetGroup>
+		</Children>
+	</WidgetGroup>
+</Template>

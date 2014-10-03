@@ -1,0 +1,101 @@
+<!DOCTYPE template>
+<!--
+Description: Mic.
+-->
+<Template>
+	<WidgetGroup>
+		<Layout>horizontal</Layout>
+		<Size>f,f</Size>
+		<Children>
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<Children>
+					<WidgetGroup>
+						<Style> QGroupBox { background-color: #DF2037; } </Style>
+						<Layout>horizontal</Layout>
+						<Children>
+							<Template src="skin:indicators/vumeter/vumeter-stereo.xml">
+								<SetVariable name="color">#DF2037</SetVariable>
+							</Template>
+						</Children>
+					</WidgetGroup>
+					<WidgetGroup>
+						<Layout>horizontal</Layout>
+						<Size>f,f</Size>
+						<Style> QGroupBox { background-color: #303030; } </Style>
+						<Children>
+							<Template src="skin:spacers/dynamic.xml"/>
+							<WidgetGroup>
+								<Layout>vertical</Layout>
+								<Size>f,f</Size>
+								<Style> QGroupBox { background: transparent; } </Style>
+								<Children>
+									<Template src="skin:spacers/dynamic.xml"/>
+									<Template src="skin:buttons/red-nodark.xml">
+										<SetVariable name="size">30f,30f</SetVariable>
+										<SetVariable name="states">2</SetVariable>
+										<SetVariable name="text"></SetVariable>
+										<SetVariable name="image">air</SetVariable>
+										<SetVariable name="leftclick">talkover</SetVariable>
+										<SetVariable name="rightclick">none</SetVariable>
+										<SetVariable name="indicator">talkover</SetVariable>
+									</Template>
+									<Template src="skin:spacers/dynamic-small.xml"/>
+								</Children>
+							</WidgetGroup>
+
+							<WidgetGroup>
+								<Layout>horizontal</Layout>
+								<Children>
+									<Template src="skin:spacers/dynamic.xml"/>
+									<WidgetGroup>
+										<Layout>vertical</Layout>
+										<Size>f,f</Size>
+										<Style> QGroupBox { background: transparent; } </Style>
+										<Children>
+											<Template src="skin:spacers/dynamic.xml"/>
+											<Template src="skin:switches/switch3.xml">
+												<SetVariable name="size">45f,20f</SetVariable>
+												<SetVariable name="text">L-M-R</SetVariable>
+												<SetVariable name="leftclick">orientation</SetVariable>
+												<SetVariable name="rightclick">orientation</SetVariable>
+												<SetVariable name="indicator">orientation</SetVariable>
+											</Template>
+										</Children>
+									</WidgetGroup>
+									<Template src="skin:spacers/dynamic.xml"/>
+									<WidgetGroup>
+										<Layout>vertical</Layout>
+										<Size>f,me</Size>
+										<Style> QGroupBox { background: transparent; } </Style>
+										<Children>
+											<Template src="skin:spacers/expander-vertical.xml"/>
+											<Template src="skin:knobs/knob-overload-full.xml">
+												<SetVariable name="color">red</SetVariable>
+												<SetVariable name="control">volume</SetVariable>
+												<SetVariable name="text">VOLUME</SetVariable>
+											</Template>
+										</Children>
+									</WidgetGroup>
+								</Children>
+								<Connection>
+									<ConfigKey persist="true"><Variable name="channel"/>,extra</ConfigKey>
+									<BindProperty>visible</BindProperty>
+								</Connection>
+							</WidgetGroup>
+
+
+							<Template src="skin:buttons/expand.xml"/>
+						</Children>
+					</WidgetGroup>
+					<Template src="skin:decorations/bottom-shadow.xml"/>
+				</Children>
+			</WidgetGroup>
+			<Template src="skin:spacers/blocks.xml"/>
+		</Children>
+		<Connection>
+			<ConfigKey><Variable name="channel"/>,enabled</ConfigKey>
+			<BindProperty>visible</BindProperty>
+		</Connection>
+	</WidgetGroup>
+</Template>

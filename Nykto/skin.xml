@@ -33,51 +33,62 @@
 					<Layout>horizontal</Layout>
 					<Size>me,me</Size>
 					<Children>
+
+						<!-- Mics -->
+
 						<WidgetGroup>
-							<Layout>vertical</Layout>
-							<Size>f,f</Size>
+							<Layout>horizontal</Layout>
 							<Children>
-								<Template src="skin:decorations/top-gray.xml"/>
-								<WidgetGroup>
-									<Layout>vertical</Layout>
-									<Size>f,f</Size>
-									<Style> QGroupBox { background-color: #303030; } </Style>
-									<Children>
-										<Template src="skin:spacers/dynamic.xml"/>
-										<WidgetGroup>
-											<Layout>horizontal</Layout>
-											<Size>f,f</Size>
-											<Style> QGroupBox { background: transparent; } </Style>
-											<Children>
-												<Template src="skin:spacers/dynamic.xml"/>
-												<Template src="skin:buttons/green-nodark.xml">
-													<SetVariable name="size">30f,30f</SetVariable>
-													<!-- <SetVariable name="maximumsize">42,-1</SetVariable> -->
-													<!-- <SetVariable name="minimumsize">42,42</SetVariable> -->
-													<SetVariable name="states">2</SetVariable>
-													<SetVariable name="text"></SetVariable>
-													<SetVariable name="image">settings</SetVariable>
-													<SetVariable name="channel">[Global]</SetVariable>
-													<SetVariable name="leftclick">blueprint</SetVariable>
-													<SetVariable name="rightclick">none</SetVariable>
-													<SetVariable name="indicator">blueprint</SetVariable>
-												</Template>
-												<Template src="skin:spacers/dynamic.xml"/>
-											</Children>
-										</WidgetGroup>
-										<Template src="skin:spacers/dynamic-small.xml"/>
-									</Children>
-								</WidgetGroup>
+
+								<Template src="skin:mic/mic.xml">
+									<SetVariable name="channel">[Microphone]</SetVariable>
+								</Template>
+								<Template src="skin:mic/mic.xml">
+									<SetVariable name="channel">[Microphone2]</SetVariable>
+								</Template>
+								<Template src="skin:mic/mic.xml">
+									<SetVariable name="channel">[Microphone3]</SetVariable>
+								</Template>
+								<Template src="skin:mic/mic.xml">
+									<SetVariable name="channel">[Microphone4]</SetVariable>
+								</Template>
 								
-								<Template src="skin:decorations/bottom-shadow.xml"/>
 							</Children>
+							<Connection>
+								<ConfigKey persist="true">[Microphone],show_microphone</ConfigKey>
+								<BindProperty>visible</BindProperty>
+							</Connection>
 						</WidgetGroup>
+
+						<!-- Layout settings -->
 						
+						<Template src="skin:panel/layout.xml">
+							<SetVariable name="channel">[Global]</SetVariable>
+						</Template>
+
+						<!-- Global settings -->
+
+						<Template src="skin:panel/global.xml">
+							<SetVariable name="channel">[Global]</SetVariable>
+						</Template>
+
+						<!-- Master BPM clock -->
+
+						<Template src="skin:panel/clock.xml"/>
+
+						<!-- Phones settings-->
+
+						<Template src="skin:panel/phones.xml"/>
+
+						<!-- Master settings-->
+
+						<Template src="skin:panel/master.xml"/>
 					</Children>
 				</WidgetGroup>
 			</Children>
 		</WidgetGroup>
 		<Template src="skin:spacers/2px.xml"/>
+
 		<!-- Samplers (for testing) -->
 
 		<WidgetGroup>

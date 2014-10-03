@@ -10,7 +10,7 @@
 		<Children>
 			<WidgetGroup>
 				<Layout>vertical</Layout>
-				<Size>42,42</Size>
+				<Size>42,40</Size>
 				<Children>
 					<WidgetGroup>
 						<Layout>stacked</Layout>

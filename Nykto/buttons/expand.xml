@@ -1,0 +1,83 @@
+<!DOCTYPE template>
+<!--
+Description: Expand button for showing extra widget things.
+-->
+<Template>
+    <WidgetGroup>
+        <Layout>stacked</Layout>
+        <Size>12f,me</Size>
+        <Style>QGroupBox {
+            border-top: 0px;
+            border-bottom: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-image: none; }
+        </Style>
+        <Children>
+            <PushButton>
+                <NumberStates>2</NumberStates>
+                <RightClickIsPushButton>true</RightClickIsPushButton>
+                <Size>me,me</Size>
+                <State>
+                    <Number>0</Number>
+                </State>
+                <State>
+                    <Number>1</Number>
+                </State>
+                <Connection>
+                    <ConfigKey persist="true"><Variable name="channel"/>,extra</ConfigKey>
+                    <ButtonState>LeftButton</ButtonState>
+                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+                </Connection>
+                <Connection>
+                    <ConfigKey persist="true"><Variable name="channel"/>,extra</ConfigKey>
+                    <ButtonState>RightButton</ButtonState>
+                    <EmitOnPressAndRelease>true</EmitOnPressAndRelease>
+                </Connection>
+            </PushButton>
+            <WidgetGroup>
+                <Layout>vertical</Layout>
+                <Children>
+                <WidgetGroup>
+                    <Layout>horizontal</Layout>
+                    <Children>
+                        <PushButton>
+                            <NumberStates>1</NumberStates>
+                            <State>
+                                <Number>0</Number>
+                                <Pressed>buttons/images/arrow-right.svg</Pressed>
+                                <Unpressed>buttons/images/arrow-right.svg</Unpressed>
+                            </State>
+                        </PushButton>
+                    </Children>
+                    <Connection>
+                        <ConfigKey persist="true"><Variable name="channel"/>,extra</ConfigKey>
+                        <BindProperty>visible</BindProperty>
+                        <Transform>
+                            <Invert/>
+                            <Add>1</Add>
+                        </Transform>
+                    </Connection>
+                </WidgetGroup>
+                <WidgetGroup>
+                    <Layout>horizontal</Layout>
+                    <Children>
+                        <PushButton>
+                            <NumberStates>1</NumberStates>
+                            <State>
+                                <Number>0</Number>
+                                <Pressed>buttons/images/arrow-left.svg</Pressed>
+                                <Unpressed>buttons/images/arrow-left.svg</Unpressed>
+                            </State>
+                        </PushButton>
+                    </Children>
+                    <Connection>
+                        <ConfigKey persist="true"><Variable name="channel"/>,extra</ConfigKey>
+                        <BindProperty>visible</BindProperty>
+                    </Connection>
+                </WidgetGroup>
+                </Children>
+            </WidgetGroup>
+        </Children>
+    </WidgetGroup>
+</Template>

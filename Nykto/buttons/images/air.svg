@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   width="10"
+   height="11">
+   <script src="svg.js">
+    // <![CDATA[
+      symbol_color = String( symbol_color );
+      opacity = Number( opacity );
+      shadow = Number( shadow );
+    // ]]>
+   </script>
+  <path
+     d="m 10,6.0034012 c 0,2.7595389 -2.23858,4.9965758 -5,4.9965758 -2.76142,0 -5,-2.2370369 -5,-4.9965758 0,-2.7595289 2.23858,-4.9965759 5,-4.9965759 2.76142,0 5,2.237047 5,4.9965759 z"
+     id="path8911-0"
+     style="fill:#ffffff;fill-opacity:0.5;prop( 'fill', 'symbol_color' );prop( 'fill-opacity', 'opacity' );" />
+  <path
+     d="M 4.5001,0.00749956 C 1.97882,0.26339956 1.0002e-4,2.4169996 1.0002e-4,5.0040996 c 0,0.1617 0.0162,0.3106 0.0312,0.4684 0.25605,-2.5196 2.37991998,-4.4657 4.96874998,-4.4657 2.58883,0 4.7127,1.9461 4.9687503,4.4657 0.015,-0.1578 0.0312,-0.3067 0.0312,-0.4684 0,-2.7596 -2.2385746,-4.99660004 -4.9999946,-4.99660004 -0.17259,0 -0.33191,-0.017 -0.5,0 z"
+     id="path8922-8"
+     style="fill:#000000;fill-opacity:0.5;prop( 'fill-opacity', 'shadow' );" />
+</svg>

@@ -1,0 +1,34 @@
+<!DOCTYPE template>
+<!--
+Description: Red overlay.
+-->
+<Template>
+    <WidgetGroup>
+        <Size>me,me</Size>
+        <Style>QGroupBox {
+            background-color: #FF3C54;
+            border-top: 2px solid rgba(0,0,0,20%); 
+            margin: 2px; }
+        </Style>
+        <Connection>
+            <ConfigKey><Variable name="channel"/>,<Variable name="indicator"/></ConfigKey>
+            <BindProperty>visible</BindProperty>
+        </Connection>
+    </WidgetGroup>
+    <WidgetGroup>
+        <Size>me,me</Size>
+        <Style>QGroupBox {
+            background-color: transparent;
+            border-top: 0px solid rgba(0,0,0,20%);
+            margin: 2px; }
+        </Style>
+        <Connection>
+            <ConfigKey><Variable name="channel"/>,<Variable name="indicator"/></ConfigKey>
+            <BindProperty>visible</BindProperty>
+            <Transform>
+                <Invert/>
+                <Add>1</Add>
+            </Transform>
+        </Connection>
+    </WidgetGroup>
+</Template>

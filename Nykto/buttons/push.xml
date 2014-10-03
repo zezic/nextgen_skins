@@ -4,7 +4,7 @@ Description: Transparent expanding button.
 -->
 <Template>
     <PushButton>
-        <TooltipId><Variable name="tooltip"/></TooltipId>
+        <!-- <TooltipId><Variable name="tooltip"/></TooltipId> -->
         <NumberStates><Variable name="states"/></NumberStates>
         <RightClickIsPushButton>true</RightClickIsPushButton>
         <Size>me,me</Size>

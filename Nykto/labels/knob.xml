@@ -21,5 +21,9 @@
 				</Children>
 			</WidgetGroup>
 		</Children>
+		<Connection>
+		    <ConfigKey persist="true">[Global],knob_labels</ConfigKey>
+		    <BindProperty>visible</BindProperty>
+		</Connection>
 	</WidgetGroup>
 </Template>

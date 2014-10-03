@@ -52,7 +52,7 @@ Description:Checkbox.
                             </Style>
                         </WidgetGroup>
                         <Label>
-                            <Style> QLabel { font: 10px PT Mono; font-weight: bold; color: rgba(39,176,217,50%); text-align: left; padding-left: 1px; text-transform: uppercase; }</Style>
+                            <Style> QLabel { font: 8px PT Mono; font-weight: bold; color: rgba(39,176,217,50%); text-align: left; padding-left: 1px; text-transform: uppercase; }</Style>
                             <Text><Variable name="text"/></Text>
                         </Label>
                     </Children>
@@ -85,7 +85,7 @@ Description:Checkbox.
                                     <State>
                                         <Number>0</Number>
                                         <Pressed>buttons/images/check.svg</Pressed>
-                                        <UnPressed>buttons/images/check.svg</UnPressed>
+                                        <Unpressed>buttons/images/check.svg</Unpressed>
                                     </State>
                                     <Connection>
                                         <ConfigKey persist="true"><Variable name="group"/>,<Variable name="showed"/></ConfigKey>
@@ -101,7 +101,7 @@ Description:Checkbox.
                             </Children>
                         </WidgetGroup>
                         <Label>
-                            <Style> QLabel { font: 10px PT Mono; font-weight: bold; color: rgba(39,176,217,100%); text-align: left; padding-left: 1px; text-transform: uppercase; }</Style>
+                            <Style> QLabel { font: 8px PT Mono; font-weight: bold; color: rgba(39,176,217,100%); text-align: left; padding-left: 1px; text-transform: uppercase; }</Style>
                             <Text><Variable name="text"/></Text>
                         </Label>
                     </Children>

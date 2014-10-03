@@ -21,6 +21,8 @@
 			</WidgetGroup>
 			<Template src="skin:buttons/blueprinted.xml">
 				<SetVariable name="size">42f,9f</SetVariable>
+				<SetVariable name="maximumsize">-1,-1</SetVariable>
+				<SetVariable name="minimumsize">-1,-1</SetVariable>
 			</Template>
 		</Children>
 	</WidgetGroup>

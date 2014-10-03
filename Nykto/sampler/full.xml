@@ -1,7 +1,7 @@
 <!DOCTYPE template>
 <!--
   Description:
-    Full sampler.
+	Full sampler.
 -->
 <Template>
 	<WidgetGroup>
@@ -59,8 +59,8 @@
 												<ObjectName>Spacer</ObjectName>
 												<Size>4f,me</Size>
 												<Connection>
-												    <ConfigKey persist="true"><Variable name="group"/>,pfl</ConfigKey>
-												    <BindProperty>visible</BindProperty>
+													<ConfigKey persist="true"><Variable name="group"/>,pfl</ConfigKey>
+													<BindProperty>visible</BindProperty>
 												</Connection>
 											</WidgetGroup>
 											<WidgetGroup>
@@ -77,8 +77,8 @@
 													</Template>
 												</Children>
 												<Connection>
-												    <ConfigKey persist="true"><Variable name="group"/>,pfl</ConfigKey>
-												    <BindProperty>visible</BindProperty>
+													<ConfigKey persist="true"><Variable name="group"/>,pfl</ConfigKey>
+													<BindProperty>visible</BindProperty>
 												</Connection>
 											</WidgetGroup>
 											<WidgetGroup>
@@ -101,11 +101,11 @@
 												<Layout>horizontal</Layout>
 												<Size>me,me</Size>
 												<Style>QGroupBox {
-												    border-top: 4px;
-												    border-bottom: 4px;
-												    border-left: 4px;
-												    border-right: 4px;
-												    border-image: url(skin:backgrounds/recess.svg); }
+													border-top: 4px;
+													border-bottom: 4px;
+													border-left: 4px;
+													border-right: 4px;
+													border-image: url(skin:backgrounds/recess.svg); }
 												</Style>
 												<Children>
 													<Template src="skin:spacers/2px.xml"/>
@@ -113,11 +113,11 @@
 														<Layout>vertical</Layout>
 														<Size>me,me</Size>
 														<Style>QGroupBox {
-														    border-top: 0px;
-														    border-bottom: 0px;
-														    border-left: 0px;
-														    border-right: 0px;
-														    border-image: none; }
+															border-top: 0px;
+															border-bottom: 0px;
+															border-left: 0px;
+															border-right: 0px;
+															border-image: none; }
 														</Style>
 														<Children>
 															<Template src="skin:spacers/2px.xml"/>
@@ -156,12 +156,12 @@
 																							</WidgetGroup>
 																						</Children>
 																					</WidgetGroup>
-																                    <TrackProperty>
-																                      <TooltipId>track_title</TooltipId>
-																                      <SizePolicy>me,min</SizePolicy>
-																                      <Property>title</Property>
-																                      <Group><Variable name="channel"/></Group>
-																                    </TrackProperty>
+																					<TrackProperty>
+																					  <TooltipId>track_title</TooltipId>
+																					  <SizePolicy>me,min</SizePolicy>
+																					  <Property>title</Property>
+																					  <Group><Variable name="channel"/></Group>
+																					</TrackProperty>
 																				</Children>
 																			</WidgetGroup>
 																			<Template src="skin:spacers/separator-vertical.xml"/>
@@ -198,8 +198,8 @@
 																	<Template src="skin:spacers/separator-horizontal.xml"/>
 																</Children>
 																<Connection>
-																    <ConfigKey persist="true"><Variable name="group"/>,title</ConfigKey>
-																    <BindProperty>visible</BindProperty>
+																	<ConfigKey persist="true"><Variable name="group"/>,title</ConfigKey>
+																	<BindProperty>visible</BindProperty>
 																</Connection>
 															</WidgetGroup>
 															<WidgetGroup>
@@ -237,8 +237,8 @@
 																			</WidgetGroup>
 																		</Children>
 																		<Connection>
-																		    <ConfigKey persist="true"><Variable name="group"/>,repeat_key</ConfigKey>
-																		    <BindProperty>visible</BindProperty>
+																			<ConfigKey persist="true"><Variable name="group"/>,repeat_key</ConfigKey>
+																			<BindProperty>visible</BindProperty>
 																		</Connection>
 																	</WidgetGroup>
 																</Children>
@@ -267,7 +267,7 @@
 																<Children>
 																	<Template src="skin:switches/switch3.xml">
 																		<SetVariable name="size">45f,20f</SetVariable>
-																		<SetVariable name="text">L - M - R</SetVariable>
+																		<SetVariable name="text">L-M-R</SetVariable>
 																		<SetVariable name="leftclick">orientation</SetVariable>
 																		<SetVariable name="rightclick">orientation</SetVariable>
 																		<SetVariable name="indicator">orientation</SetVariable>
@@ -285,8 +285,8 @@
 															</WidgetGroup>
 														</Children>
 														<Connection>
-														    <ConfigKey persist="true"><Variable name="group"/>,lmrcues</ConfigKey>
-														    <BindProperty>visible</BindProperty>
+															<ConfigKey persist="true"><Variable name="group"/>,lmrcues</ConfigKey>
+															<BindProperty>visible</BindProperty>
 														</Connection>
 													</WidgetGroup>
 												</Children>
@@ -298,12 +298,12 @@
 									<WidgetGroup>
 										<Layout>vertical</Layout>
 										<Size>f,me</Size>
-		  								<Children>
+										<Children>
 											<WidgetGroup>
 												<Layout>horizontal</Layout>
 												<Size>f,me</Size>
-				  								<Children>
-				  									<Template src="skin:spacers/dynamic.xml"/>
+												<Children>
+													<Template src="skin:spacers/dynamic.xml"/>
 													<Template src="skin:sliders/small.xml">
 														<SetVariable name="size">22f,me</SetVariable>
 														<SetVariable name="parameter">rate</SetVariable>
@@ -313,8 +313,8 @@
 											<Template src="skin:spacers/dynamic-small.xml"/>
 										</Children>
 										<Connection>
-										    <ConfigKey persist="true"><Variable name="group"/>,tempo_slider</ConfigKey>
-										    <BindProperty>visible</BindProperty>
+											<ConfigKey persist="true"><Variable name="group"/>,tempo_slider</ConfigKey>
+											<BindProperty>visible</BindProperty>
 										</Connection>
 									</WidgetGroup>
 									<Template src="skin:spacers/dynamic.xml"/>
@@ -325,254 +325,263 @@
 					<Template src="skin:decorations/bottom-shadow.xml"/>
 				</Children>
 				<Connection>
-				    <ConfigKey>[Global],blueprint</ConfigKey>
-				    <BindProperty>visible</BindProperty>
-				    <Transform>
-				        <Invert/>
-				        <Add>1</Add>
-				    </Transform>
+					<ConfigKey>[Global],blueprint</ConfigKey>
+					<BindProperty>visible</BindProperty>
+					<Transform>
+						<Invert/>
+						<Add>1</Add>
+					</Transform>
 				</Connection>
 			</WidgetGroup>
 
 			<!-- Blueprinted -->
 
-				<WidgetGroup>
-					<ObjectName>SamplerFull</ObjectName>
-					<Layout>vertical</Layout>
-					<Size>me,me</Size>
-					<Style>QGroupBox {
-					    border-top: 3px;
-					    border-bottom: 3px;
-					    border-left: 3px;
-					    border-right: 3px;
-					    border-image: url(skin:buttons/images/blueprinted.svg); }
-					</Style>
-					<Children>
-						<Template src="skin:spacers/separator-horizontal-transparent.xml"/>
-						<WidgetGroup>
-							<Layout>vertical</Layout>
-							<Style>QGroupBox {
-							    border-top: 0px;
-							    border-bottom: 0px;
-							    border-left: 0px;
-							    border-right: 0px;
-							    border-image: none; }
-							</Style>
-							<Children>
-								<Template src="skin:spacers/dynamic.xml"/>
-								<WidgetGroup>
-									<Layout>horizontal</Layout>
-									<Size>me,me</Size>
-									<Children>
-										<Template src="skin:spacers/dynamic.xml"/>
-										<!-- Play, Gain+Overload, PFL -->
+			<WidgetGroup>
+				<ObjectName>SamplerFull</ObjectName>
+				<Layout>vertical</Layout>
+				<Size>me,me</Size>
+				<Style>QGroupBox {
+					border-top: 3px;
+					border-bottom: 3px;
+					border-left: 3px;
+					border-right: 3px;
+					border-image: url(skin:buttons/images/blueprinted.svg); }
+				</Style>
+				<Children>
+					<Template src="skin:spacers/separator-horizontal-transparent.xml"/>
+					<WidgetGroup>
+						<Layout>vertical</Layout>
+						<Style>QGroupBox {
+							border-top: 0px;
+							border-bottom: 0px;
+							border-left: 0px;
+							border-right: 0px;
+							border-image: none; }
+						</Style>
+						<Children>
+							<Template src="skin:spacers/dynamic.xml"/>
+							<WidgetGroup>
+								<Layout>horizontal</Layout>
+								<Size>me,me</Size>
+								<Children>
+									<Template src="skin:spacers/dynamic.xml"/>
+									<!-- Play, Gain+Overload, PFL -->
 
-										<WidgetGroup>
-											<Layout>vertical</Layout>
-											<Size>f,me</Size>
-											<Style> QGroupBox { background: transparent; } </Style>
-											<Children>
-												<Template src="skin:buttons/blueprinted.xml">
-													<SetVariable name="size">42f,22me</SetVariable>
-													<SetVariable name="maximumsize">42,42</SetVariable>
-												</Template>
-												<Template src="skin:spacers/expander-vertical.xml"/>
-												<Template src="skin:knobs/blueknob.xml">
-												</Template>
-												<WidgetGroup>
-													<Size>f,me</Size>
-													<Children>
-														<Template src="skin:spacers/expander-vertical.xml"/>
-													</Children>
-													<Connection>
-													    <ConfigKey persist="true"><Variable name="group"/>,pfl</ConfigKey>
-													    <BindProperty>visible</BindProperty>
-													    <Transform>
-													    </Transform>
-													</Connection>
-												</WidgetGroup>
-												<WidgetGroup>
-													<Layout>horizontal</Layout>
-													<Children>
-														<Template src="skin:buttons/blueprinted.xml">
-															<SetVariable name="size">42f,22f</SetVariable>
-														</Template>
-													</Children>
-													<Connection>
-													    <ConfigKey persist="true"><Variable name="group"/>,pfl</ConfigKey>
-													    <BindProperty>visible</BindProperty>
-													</Connection>
-												</WidgetGroup>
-												<WidgetGroup>
-													<Size>1f,me</Size>
-													<MaximumSize>1f,5</MaximumSize>
-												</WidgetGroup>
-												<Template src="skin:spacers/dynamic.xml"/>
-											</Children>
-										</WidgetGroup>
-										<Template src="skin:spacers/dynamic.xml"/>
+									<WidgetGroup>
+										<Layout>vertical</Layout>
+										<Size>f,me</Size>
+										<Style> QGroupBox { background: transparent; } </Style>
+										<Children>
+											<Template src="skin:buttons/blueprinted.xml">
+												<SetVariable name="size">42f,22me</SetVariable>
+												<SetVariable name="maximumsize">42,42</SetVariable>
+												<SetVariable name="minimumsize">-1,-1</SetVariable>
+											</Template>
+											<Template src="skin:spacers/expander-vertical.xml"/>
+											<Template src="skin:knobs/blueknob.xml">
+											</Template>
+											<WidgetGroup>
+												<Size>f,me</Size>
+												<Children>
+													<Template src="skin:spacers/expander-vertical.xml"/>
+												</Children>
+												<Connection>
+													<ConfigKey persist="true"><Variable name="group"/>,pfl</ConfigKey>
+													<BindProperty>visible</BindProperty>
+													<Transform>
+													</Transform>
+												</Connection>
+											</WidgetGroup>
+											<WidgetGroup>
+												<Layout>horizontal</Layout>
+												<Children>
+													<Template src="skin:buttons/blueprinted.xml">
+														<SetVariable name="size">42f,22f</SetVariable>
+														<SetVariable name="maximumsize">-1,-1</SetVariable>
+														<SetVariable name="minimumsize">-1,-1</SetVariable>
+													</Template>
+												</Children>
+												<Connection>
+													<ConfigKey persist="true"><Variable name="group"/>,pfl</ConfigKey>
+													<BindProperty>visible</BindProperty>
+												</Connection>
+											</WidgetGroup>
+											<WidgetGroup>
+												<Size>1f,me</Size>
+												<MaximumSize>1f,5</MaximumSize>
+											</WidgetGroup>
+											<Template src="skin:spacers/dynamic.xml"/>
+										</Children>
+									</WidgetGroup>
+									<Template src="skin:spacers/dynamic.xml"/>
 
-										<!-- Waveform, Title+Eject, BPM+Sync, Repeat, Keylock, Orientation, Hotcues -->
+									<!-- Waveform, Title+Eject, BPM+Sync, Repeat, Keylock, Orientation, Hotcues -->
 
-										<WidgetGroup>
-											<Layout>vertical</Layout>
-											<Size>me,me</Size>
-											<Style> QGroupBox { background: transparent; } </Style>
-											<Children>
-												<WidgetGroup>
-													<Layout>horizontal</Layout>
-													<Size>me,me</Size>
-													<Style>QGroupBox {
-													    border-top: 3px;
-													    border-bottom: 3px;
-													    border-left: 3px;
-													    border-right: 3px;
-													    border-image: url(skin:buttons/images/blueprinted.svg); }
-													</Style>
-													<Children>
-														<WidgetGroup>
-															<Style>QGroupBox {
-															    border-top: 0px;
-															    border-bottom: 0px;
-															    border-left: 0px;
-															    border-right: 0px;
-															    border-image: none; }
-															</Style>
-															<Layout>vertical</Layout>
-															<Children>
-																<Template src="skin:buttons/checkbox-personal.xml">
-																	<SetVariable name="showed">tiny</SetVariable>
-																	<SetVariable name="text">Tiny</SetVariable>
-																</Template>
-																<Template src="skin:buttons/checkbox.xml">
-																	<SetVariable name="showed">lmrcues</SetVariable>
-																	<SetVariable name="text">LMR, Cues</SetVariable>
-																</Template>
-																<Template src="skin:buttons/checkbox.xml">
-																	<SetVariable name="showed">pfl</SetVariable>
-																	<SetVariable name="text">PFL</SetVariable>
-																</Template>
-															</Children>
-														</WidgetGroup>
-														<WidgetGroup>
-															<Style>QGroupBox {
-															    border-top: 0px;
-															    border-bottom: 0px;
-															    border-left: 0px;
-															    border-right: 0px;
-															    border-image: none; }
-															</Style>
-															<Layout>vertical</Layout>
-															<Children>
-																<Template src="skin:buttons/checkbox.xml">
-																	<SetVariable name="showed">title</SetVariable>
-																	<SetVariable name="text">Title</SetVariable>
-																</Template>
-																<Template src="skin:buttons/checkbox.xml">
-																	<SetVariable name="showed">repeat_key</SetVariable>
-																	<SetVariable name="text">Rpt, Key</SetVariable>
-																</Template>
-																<Template src="skin:buttons/checkbox.xml">
-																	<SetVariable name="showed">tempo_slider</SetVariable>
-																	<SetVariable name="text">Tempo</SetVariable>
-																</Template>
-															</Children>
-														</WidgetGroup>
-													</Children>
-												</WidgetGroup>
+									<WidgetGroup>
+										<Layout>vertical</Layout>
+										<Size>me,me</Size>
+										<Style> QGroupBox { background: transparent; } </Style>
+										<Children>
+											<WidgetGroup>
+												<Layout>horizontal</Layout>
+												<Size>me,me</Size>
+												<Style>QGroupBox {
+													border-top: 3px;
+													border-bottom: 3px;
+													border-left: 3px;
+													border-right: 3px;
+													border-image: url(skin:buttons/images/blueprinted.svg); }
+												</Style>
+												<Children>
+													<WidgetGroup>
+														<Style>QGroupBox {
+															border-top: 0px;
+															border-bottom: 0px;
+															border-left: 0px;
+															border-right: 0px;
+															border-image: none; }
+														</Style>
+														<Layout>vertical</Layout>
+														<Children>
+															<Template src="skin:buttons/checkbox-personal.xml">
+																<SetVariable name="showed">tiny</SetVariable>
+																<SetVariable name="text">Tiny</SetVariable>
+															</Template>
+															<Template src="skin:buttons/checkbox.xml">
+																<SetVariable name="showed">lmrcues</SetVariable>
+																<SetVariable name="text">LMR, Cues</SetVariable>
+															</Template>
+															<Template src="skin:buttons/checkbox.xml">
+																<SetVariable name="showed">pfl</SetVariable>
+																<SetVariable name="text">PFL</SetVariable>
+															</Template>
+														</Children>
+													</WidgetGroup>
+													<WidgetGroup>
+														<Style>QGroupBox {
+															border-top: 0px;
+															border-bottom: 0px;
+															border-left: 0px;
+															border-right: 0px;
+															border-image: none; }
+														</Style>
+														<Layout>vertical</Layout>
+														<Children>
+															<Template src="skin:buttons/checkbox.xml">
+																<SetVariable name="showed">title</SetVariable>
+																<SetVariable name="text">Title</SetVariable>
+															</Template>
+															<Template src="skin:buttons/checkbox.xml">
+																<SetVariable name="showed">repeat_key</SetVariable>
+																<SetVariable name="text">Rpt, Key</SetVariable>
+															</Template>
+															<Template src="skin:buttons/checkbox.xml">
+																<SetVariable name="showed">tempo_slider</SetVariable>
+																<SetVariable name="text">Tempo</SetVariable>
+															</Template>
+														</Children>
+													</WidgetGroup>
+												</Children>
+											</WidgetGroup>
 
-												<!-- Orientation, Hotcues -->
-												<WidgetGroup>
-													<Layout>vertical</Layout>
-													<Size>f,f</Size>
-													<Children>
-														
-														<WidgetGroup>
-															<Layout>horizontal</Layout>
-															<Size>f,me</Size>
-															<Children>
-																<WidgetGroup>
-																	<Layout>vertical</Layout>
-																	<Size>f,me</Size>
-																	<Children>
-																		<Template src="skin:spacers/dynamic.xml"/>
-																		<Template src="skin:buttons/blueprinted.xml">
-																			<SetVariable name="size">45f,28f</SetVariable>
-																		</Template>
-																		<Template src="skin:spacers/expander-vertical.xml"/>
-																		<Template src="skin:spacers/dynamic-small.xml"/>
-																	</Children>
-																	<Connection>
-																	    <ConfigKey persist="true"><Variable name="group"/>,lmrcues</ConfigKey>
-																	    <BindProperty>visible</BindProperty>
-																	</Connection>
-																</WidgetGroup>
-																<Template src="skin:spacers/dynamic.xml"/>
-																<WidgetGroup>
-																	<Layout>vertical</Layout>
-																	<Size>f,d</Size>
-																	<Children>
-																		<Template src="skin:spacers/dynamic.xml"/>
-																		<Template src="skin:buttons/blueprinted.xml">
-																			<SetVariable name="size">102f,27f</SetVariable>
-																		</Template>
-																		<Template src="skin:spacers/expander-vertical.xml"/>
-																	</Children>
-																	<Connection>
-																	    <ConfigKey persist="true"><Variable name="group"/>,lmrcues</ConfigKey>
-																	    <BindProperty>visible</BindProperty>
-																	</Connection>
-																</WidgetGroup>
-															</Children>
-														</WidgetGroup>
-													</Children>
-												</WidgetGroup>
-											</Children>
-										</WidgetGroup>
+											<!-- Orientation, Hotcues -->
+											<WidgetGroup>
+												<Layout>vertical</Layout>
+												<Size>f,f</Size>
+												<Children>
+													
+													<WidgetGroup>
+														<Layout>horizontal</Layout>
+														<Size>f,me</Size>
+														<Children>
+															<WidgetGroup>
+																<Layout>vertical</Layout>
+																<Size>f,me</Size>
+																<Children>
+																	<Template src="skin:spacers/dynamic.xml"/>
+																	<Template src="skin:buttons/blueprinted.xml">
+																		<SetVariable name="size">45f,28f</SetVariable>
+																		<SetVariable name="maximumsize">-1,-1</SetVariable>
+																		<SetVariable name="minimumsize">-1,-1</SetVariable>
+																	</Template>
+																	<Template src="skin:spacers/expander-vertical.xml"/>
+																	<Template src="skin:spacers/dynamic-small.xml"/>
+																</Children>
+																<Connection>
+																	<ConfigKey persist="true"><Variable name="group"/>,lmrcues</ConfigKey>
+																	<BindProperty>visible</BindProperty>
+																</Connection>
+															</WidgetGroup>
+															<Template src="skin:spacers/dynamic.xml"/>
+															<WidgetGroup>
+																<Layout>vertical</Layout>
+																<Size>f,d</Size>
+																<Children>
+																	<Template src="skin:spacers/dynamic.xml"/>
+																	<Template src="skin:buttons/blueprinted.xml">
+																		<SetVariable name="size">102f,27f</SetVariable>
+																		<SetVariable name="maximumsize">-1,-1</SetVariable>
+																		<SetVariable name="minimumsize">-1,-1</SetVariable>
+																	</Template>
+																	<Template src="skin:spacers/expander-vertical.xml"/>
+																</Children>
+																<Connection>
+																	<ConfigKey persist="true"><Variable name="group"/>,lmrcues</ConfigKey>
+																	<BindProperty>visible</BindProperty>
+																</Connection>
+															</WidgetGroup>
+														</Children>
+													</WidgetGroup>
+												</Children>
+											</WidgetGroup>
+										</Children>
+									</WidgetGroup>
 
-										<!-- Tempo slider -->
-										<WidgetGroup>
-											<Layout>vertical</Layout>
-											<Size>f,me</Size>
-			  								<Children>
-												<WidgetGroup>
-													<Layout>horizontal</Layout>
-													<Size>f,me</Size>
-					  								<Children>
-					  									<Template src="skin:spacers/dynamic.xml"/>
-														<Template src="skin:buttons/blueprinted.xml">
-															<SetVariable name="size">22f,me</SetVariable>
-														</Template>
-													</Children>
-												</WidgetGroup>
-												<Template src="skin:spacers/dynamic-small.xml"/>
-											</Children>
-											<Connection>
-											    <ConfigKey persist="true"><Variable name="group"/>,tempo_slider</ConfigKey>
-											    <BindProperty>visible</BindProperty>
-											</Connection>
-										</WidgetGroup>
-										<Template src="skin:spacers/dynamic.xml"/>
-									</Children>
-								</WidgetGroup>
-								<!-- <Template src="skin:spacers/dynamic.xml"/> -->
-							</Children>
-						</WidgetGroup>
-						<Template src="skin:spacers/4px.xml"/>
-					</Children>
-					<Connection>
-					    <ConfigKey>[Global],blueprint</ConfigKey>
-					    <BindProperty>visible</BindProperty>
-					</Connection>
-				</WidgetGroup>
+									<!-- Tempo slider -->
+									<WidgetGroup>
+										<Layout>vertical</Layout>
+										<Size>f,me</Size>
+										<Children>
+											<WidgetGroup>
+												<Layout>horizontal</Layout>
+												<Size>f,me</Size>
+												<Children>
+													<Template src="skin:spacers/dynamic.xml"/>
+													<Template src="skin:buttons/blueprinted.xml">
+														<SetVariable name="size">22f,me</SetVariable>
+														<SetVariable name="maximumsize">-1,-1</SetVariable>
+														<SetVariable name="minimumsize">-1,-1</SetVariable>
+													</Template>
+												</Children>
+											</WidgetGroup>
+											<Template src="skin:spacers/dynamic-small.xml"/>
+										</Children>
+										<Connection>
+											<ConfigKey persist="true"><Variable name="group"/>,tempo_slider</ConfigKey>
+											<BindProperty>visible</BindProperty>
+										</Connection>
+									</WidgetGroup>
+									<Template src="skin:spacers/dynamic.xml"/>
+								</Children>
+							</WidgetGroup>
+							<!-- <Template src="skin:spacers/dynamic.xml"/> -->
+						</Children>
+					</WidgetGroup>
+					<Template src="skin:spacers/4px.xml"/>
+				</Children>
+				<Connection>
+					<ConfigKey>[Global],blueprint</ConfigKey>
+					<BindProperty>visible</BindProperty>
+				</Connection>
+			</WidgetGroup>
 		</Children>
 		<Connection>
-		    <ConfigKey persist="true"><Variable name="channel"/>,tiny</ConfigKey>
-		    <BindProperty>visible</BindProperty>
-		    <Transform>
-		        <Invert/>
-		        <Add>1</Add>
-		    </Transform>
+			<ConfigKey persist="true"><Variable name="channel"/>,tiny</ConfigKey>
+			<BindProperty>visible</BindProperty>
+			<Transform>
+				<Invert/>
+				<Add>1</Add>
+			</Transform>
 		</Connection>
 	</WidgetGroup>
 </Template>

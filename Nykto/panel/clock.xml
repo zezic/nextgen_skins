@@ -1,0 +1,110 @@
+<!DOCTYPE template>
+<!--
+Description: Global settings.
+-->
+<Template>
+    <WidgetGroup>
+        <Layout>vertical</Layout>
+        <Size>f,me</Size>
+        <Children>
+            <Template src="skin:decorations/top-gray.xml"/>
+            <WidgetGroup>
+                <Layout>horizontal</Layout>
+                <Size>f,me</Size>
+                <Style> QGroupBox { background-color: #303030; } </Style>
+                <Children>
+                    <Template src="skin:spacers/4px.xml"/>
+                    <WidgetGroup>
+                        <Layout>vertical</Layout>
+                        <Size>f,me</Size>
+                        <Style> QGroupBox { background: transparent; } </Style>
+                        <Children>
+                            <Template src="skin:spacers/4px.xml"/>
+                            <WidgetGroup>
+                                <Layout>stacked</Layout>
+                                <Size>81f,me</Size>
+                                <Style> QGroupBox { background-color: rgba(0,0,0,50%); border-radius: 2px; } </Style>
+                                <Children>
+                                    <Template src="skin:buttons/push.xml">
+                                        <SetVariable name="states">2</SetVariable>
+                                        <SetVariable name="channel">[InternalClock]</SetVariable>
+                                        <SetVariable name="leftclick">sync_master</SetVariable>
+                                        <SetVariable name="rightclick">sync_master</SetVariable>
+                                    </Template>
+                                    <WidgetGroup>
+                                        <Layout>vertical</Layout>
+                                        <Size>me,me</Size>
+                                        <Style> QGroupBox { background-color: transparent; } </Style>
+                                        <Children>
+                                            <Template src="skin:spacers/expander-vertical.xml"/>
+                                            <WidgetGroup>
+                                                <Layout>horizontal</Layout>
+                                                <Children>
+                                                    <Template src="skin:spacers/expander-horizontal.xml"/>
+                                                    <NumberBpm>
+                                                        <TooltipId>visual_bpm</TooltipId>
+                                                        <Style> QLabel { font: bold 15px Felipe;background-color: transparent; color: rgba(255,255,255,50%); text-align: right; padding-left: 0px; } </Style>
+                                                        <Channel>1</Channel>
+                                                        <Size>f,f</Size>
+                                                        <NumberOfDigits>2</NumberOfDigits>
+                                                        <Connection>
+                                                            <ConfigKey>[InternalClock],bpm</ConfigKey>
+                                                        </Connection>
+                                                    </NumberBpm>
+                                                    <Template src="skin:spacers/dynamic-small.xml"/>
+                                                    <WidgetGroup>
+                                                        <Layout>stacked</Layout>
+                                                        <Size>12f,min</Size>
+                                                        <Children>
+                                                            <WidgetGroup>
+                                                                <Children>
+                                                                    <Label>
+                                                                        <Size>f,f</Size>
+                                                                        <Style> QLabel { font: bold 15px Felipe;background-color: transparent; color: #FF001F; text-align: left; } </Style>
+                                                                        <Text>M</Text>
+                                                                    </Label>
+                                                                </Children>
+                                                                <Connection>
+                                                                    <ConfigKey>[InternalClock],sync_master</ConfigKey>
+                                                                    <BindProperty>visible</BindProperty>
+                                                                </Connection>
+                                                            </WidgetGroup>
+                                                            <WidgetGroup>
+                                                                <Children>
+                                                                    <Label>
+                                                                        <Size>f,f</Size>
+                                                                        <Style> QLabel { font: bold 15px Felipe;background-color: transparent; color: rgba(255,255,255,35%); text-align: left; } </Style>
+                                                                        <Text>M</Text>
+                                                                    </Label>
+                                                                </Children>
+                                                                <Connection>
+                                                                    <ConfigKey>[InternalClock],sync_master</ConfigKey>
+                                                                    <BindProperty>visible</BindProperty>
+                                                                    <Transform>
+                                                                        <Invert/>
+                                                                        <Add>1</Add>
+                                                                    </Transform>
+                                                                </Connection>
+                                                            </WidgetGroup>
+                                                        </Children>
+                                                    </WidgetGroup>
+                                                    <Template src="skin:spacers/expander-horizontal.xml"/>
+                                                </Children>
+                                            </WidgetGroup>
+                                            <Template src="skin:spacers/expander-vertical.xml"/>
+                                        </Children>
+                                    </WidgetGroup>
+                                </Children>
+                            </WidgetGroup>
+                            
+                            <Template src="skin:spacers/2px.xml"/>
+                        </Children>
+                    </WidgetGroup>
+                    <Template src="skin:spacers/4px.xml"/>
+                </Children>
+            </WidgetGroup>
+            <Template src="skin:decorations/bottom-shadow.xml"/>
+        </Children>
+    </WidgetGroup>
+    <Template src="skin:spacers/blocks.xml"/>
+</Template>

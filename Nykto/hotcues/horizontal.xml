@@ -45,6 +45,8 @@
 					<Template src="skin:spacers/separator-vertical-dark.xml"/>
 					<Template src="skin:buttons/borderless-green.xml">
 						<SetVariable name="size">23f,23f</SetVariable>
+						<SetVariable name="maximumsize">-1,-1</SetVariable>
+						<SetVariable name="minimumsize">-1,-1</SetVariable>
 						<SetVariable name="states">2</SetVariable>
 						<SetVariable name="text">3</SetVariable>
 						<SetVariable name="image"></SetVariable>

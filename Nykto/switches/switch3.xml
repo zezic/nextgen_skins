@@ -110,9 +110,13 @@ Description: Hackish 3 position switch.
                     <Template src="skin:switches/background.xml"/>
                 </Children>
             </WidgetGroup>
-            <Template src="skin:labels/switch.xml">
-                <SetVariable name="text">L-M-R</SetVariable>
-            </Template>
+            <WidgetGroup>
+                <Size>me,f</Size>
+                <Layout>horizontal</Layout>
+                <Children>
+                    <Template src="skin:labels/switch.xml"/>
+                </Children>
+            </WidgetGroup>
         </Children>
     </WidgetGroup>
 </Template>

@@ -1,0 +1,69 @@
+<!DOCTYPE template>
+<!--
+Description: Headphones settings.
+-->
+<Template>
+	<WidgetGroup>
+		<Layout>horizontal</Layout>
+		<Size>f,me</Size>
+		<Children>
+			<SetVariable name="channel">[Master]</SetVariable>
+			<WidgetGroup>
+				<Layout>vertical</Layout>
+				<Children>
+					<Template src="skin:decorations/top-green.xml"/>
+					<WidgetGroup>
+						<Layout>horizontal</Layout>
+						<Size>f,me</Size>
+						<Style> QGroupBox { background-color: #303030; } </Style>
+						<Children>
+							<Template src="skin:spacers/dynamic-small.xml"/>
+							<WidgetGroup>
+								<Layout>vertical</Layout>
+								<Size>28f,25f</Size>
+								<Style> QGroupBox { background-image: url("skin:labels/room_pfl.svg"); } </Style>
+							</WidgetGroup>
+							<Template src="skin:spacers/dynamic-small.xml"/>
+							<WidgetGroup>
+								<Layout>vertical</Layout>
+								<Size>f,me</Size>
+								<Style> QGroupBox { background: transparent; } </Style>
+								<Children>
+									<Template src="skin:spacers/expander-vertical.xml"/>
+									<Template src="skin:knobs/knob.xml">
+										<SetVariable name="color">green</SetVariable>
+										<SetVariable name="control">headMix</SetVariable>
+										<SetVariable name="text">ROOM-PFL</SetVariable>
+									</Template>
+								</Children>
+							</WidgetGroup>
+							<Template src="skin:spacers/4px.xml"/>
+							<WidgetGroup>
+								<Layout>vertical</Layout>
+								<Size>f,me</Size>
+								<Style> QGroupBox { background: transparent; } </Style>
+								<Children>
+									<Template src="skin:spacers/expander-vertical.xml"/>
+									<Template src="skin:knobs/knob-full.xml">
+										<SetVariable name="color">green</SetVariable>
+										<SetVariable name="control">headVolume</SetVariable>
+										<SetVariable name="text">VOLUME</SetVariable>
+									</Template>
+								</Children>
+							</WidgetGroup>
+							<Template src="skin:spacers/dynamic-small.xml"/>
+							<WidgetGroup>
+								<Layout>vertical</Layout>
+								<Size>16f,14f</Size>
+								<Style> QGroupBox { background-image: url("skin:labels/phones.svg"); } </Style>
+							</WidgetGroup>
+							<Template src="skin:spacers/dynamic-small.xml"/>
+						</Children>
+					</WidgetGroup>
+					<Template src="skin:decorations/bottom-shadow.xml"/>
+				</Children>
+			</WidgetGroup>
+			<Template src="skin:spacers/blocks.xml"/>
+		</Children>
+	</WidgetGroup>
+</Template>

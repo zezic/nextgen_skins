@@ -1,0 +1,113 @@
+<!DOCTYPE template>
+<!--
+Description: Layout settings.
+-->
+<Template>
+	<WidgetGroup>
+		<Layout>vertical</Layout>
+		<Size>f,me</Size>
+		<Children>
+			<Template src="skin:decorations/top-gray.xml"/>
+			<WidgetGroup>
+				<Layout>horizontal</Layout>
+				<Size>f,me</Size>
+				<Style> QGroupBox { background-color: #303030; } </Style>
+				<Children>
+					<Template src="skin:spacers/dynamic.xml"/>
+					<WidgetGroup>
+						<Layout>vertical</Layout>
+						<Size>f,f</Size>
+						<Style> QGroupBox { background: transparent; } </Style>
+						<Children>
+							<Template src="skin:spacers/dynamic.xml"/>
+							<Template src="skin:switches/switch2.xml">
+								<SetVariable name="size">34f,20f</SetVariable>
+								<SetVariable name="text">FX</SetVariable>
+								<SetVariable name="leftclick">fx</SetVariable>
+								<SetVariable name="rightclick">fx</SetVariable>
+								<SetVariable name="switch">fx</SetVariable>
+							</Template>
+							<Template src="skin:spacers/expander-vertical.xml"/>
+						</Children>
+					</WidgetGroup>
+					<Template src="skin:spacers/dynamic.xml"/>
+					<WidgetGroup>
+						<Layout>vertical</Layout>
+						<Children>
+							<Template src="skin:spacers/dynamic.xml"/>
+							<WidgetGroup>
+								<Layout>horizontal</Layout>
+								<Children>
+									<WidgetGroup>
+										<Layout>vertical</Layout>
+										<Size>f,f</Size>
+										<Style> QGroupBox { background: transparent; } </Style>
+										<Children>
+											<Template src="skin:switches/switch2-notext.xml">
+												<SetVariable name="size">34f,20f</SetVariable>
+												<SetVariable name="leftclick">decks12</SetVariable>
+												<SetVariable name="rightclick">decks12</SetVariable>
+												<SetVariable name="switch">decks12</SetVariable>
+											</Template>
+										</Children>
+									</WidgetGroup>
+									<Template src="skin:spacers/dynamic.xml"/>
+									<WidgetGroup>
+										<Layout>vertical</Layout>
+										<Size>f,f</Size>
+										<Style> QGroupBox { background: transparent; } </Style>
+										<Children>
+											<Template src="skin:switches/switch2-notext.xml">
+												<SetVariable name="size">34f,20f</SetVariable>
+												<SetVariable name="leftclick">decks34</SetVariable>
+												<SetVariable name="rightclick">decks34</SetVariable>
+												<SetVariable name="switch">decks34</SetVariable>
+											</Template>
+										</Children>
+									</WidgetGroup>
+								</Children>
+							</WidgetGroup>
+							<WidgetGroup>
+								<Layout>horizontal</Layout>
+								<Children>
+									<WidgetGroup>
+										<Size>8f,6f</Size>
+										<Style> QGroupBox { background-image: url("skin:labels/left-connection.svg"); } </Style>
+									</WidgetGroup>
+									<Template src="skin:labels/switch.xml">
+										<SetVariable name="text">DECKS</SetVariable>
+									</Template>
+									<WidgetGroup>
+										<Size>8f,6f</Size>
+										<Style> QGroupBox { background-image: url("skin:labels/right-connection.svg"); } </Style>
+									</WidgetGroup>
+								</Children>
+							</WidgetGroup>
+							<Template src="skin:spacers/expander-vertical.xml"/>
+						</Children>
+					</WidgetGroup>
+					<Template src="skin:spacers/dynamic.xml"/>
+					<WidgetGroup>
+						<Layout>vertical</Layout>
+						<Size>f,f</Size>
+						<Style> QGroupBox { background: transparent; } </Style>
+						<Children>
+							<Template src="skin:spacers/dynamic.xml"/>
+							<Template src="skin:switches/switch2.xml">
+								<SetVariable name="size">34f,20f</SetVariable>
+								<SetVariable name="text">SMPLRS</SetVariable>
+								<SetVariable name="leftclick">samplers</SetVariable>
+								<SetVariable name="rightclick">samplers</SetVariable>
+								<SetVariable name="switch">samplers</SetVariable>
+							</Template>
+							<Template src="skin:spacers/expander-vertical.xml"/>
+						</Children>
+					</WidgetGroup>
+					<Template src="skin:spacers/2px.xml"/>
+				</Children>
+			</WidgetGroup>
+			<Template src="skin:decorations/bottom-shadow.xml"/>
+		</Children>
+	</WidgetGroup>
+	<Template src="skin:spacers/blocks.xml"/>
+</Template>

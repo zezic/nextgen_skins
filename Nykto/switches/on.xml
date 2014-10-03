@@ -1,0 +1,19 @@
+<!DOCTYPE template>
+<!--
+  Description:
+    On symbol.
+-->
+<Template>
+	<WidgetGroup>
+		<Layout>horizontal</Layout>
+		<Children>
+			<WidgetGroup>
+				<Size>3f,8f</Size>
+			</WidgetGroup>
+			<WidgetGroup>
+				<Style>QGroupBox { background-color: rgba(255,255,255,50%); }	</Style>
+				<Size>2f,8f</Size>
+			</WidgetGroup>
+		</Children>
+	</WidgetGroup>
+</Template>

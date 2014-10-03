@@ -4,13 +4,6 @@
     Sampler.
 -->
 <Template>
-	<!-- <WidgetStack>
-		<ObjectName>Sampler</ObjectName>
-		<SizePolicy>me,me</SizePolicy>
-		<MaximumSize>-1,-1</MaximumSize>
-		<Children> -->
-			<Template src="skin:sampler/tiny.xml" trigger="[Samplers],tiny"/>
-			<Template src="skin:sampler/full.xml" trigger="[Samplers],full"/>
-		<!-- </Children>
-	</WidgetStack> -->
+	<Template src="skin:sampler/tiny.xml" trigger="[Samplers],tiny"/>
+	<Template src="skin:sampler/full.xml" trigger="[Samplers],full"/>
 </Template>
