@@ -4,6 +4,7 @@ This is repo for new Mixxx 1.12 skin, which should make Mixxx interface cleaner,
 Skin uses Felipe and PT Mono fonts.
 Pull Request #350 (resizable VuMeters) necessary to run skin.
 
-Status: [NOT USABLE YET, UNDER HEAVY CONSTRUCTION]
+~~Status: [NOT USABLE YET, UNDER HEAVY CONSTRUCTION]~~
+Status: Poject abandoned because of [better mockups](https://imgur.com/a/EUPCQHf)
 
 ![alt tag](https://raw.githubusercontent.com/zezic/nextgen_skins/master/Nykto.png)
